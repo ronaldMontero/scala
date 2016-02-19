@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCruz", "MCruz\MCruz.csproj", "{250D2516-0A4E-44A0-84E8-C32A9FFC6DB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCruzPresentacion", "MCruz\MCruzPresentacion.csproj", "{250D2516-0A4E-44A0-84E8-C32A9FFC6DB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCruzDatos", "MCruzDatos\MCruzDatos.csproj", "{C98D8A86-C855-4445-963E-6394499221F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCruzNegocio", "MCruzNegocio\MCruzNegocio.csproj", "{6EAC8BDE-7DC9-4C82-8D83-98A90F99FB3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{250D2516-0A4E-44A0-84E8-C32A9FFC6DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{250D2516-0A4E-44A0-84E8-C32A9FFC6DB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{250D2516-0A4E-44A0-84E8-C32A9FFC6DB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C98D8A86-C855-4445-963E-6394499221F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C98D8A86-C855-4445-963E-6394499221F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C98D8A86-C855-4445-963E-6394499221F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C98D8A86-C855-4445-963E-6394499221F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EAC8BDE-7DC9-4C82-8D83-98A90F99FB3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EAC8BDE-7DC9-4C82-8D83-98A90F99FB3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EAC8BDE-7DC9-4C82-8D83-98A90F99FB3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EAC8BDE-7DC9-4C82-8D83-98A90F99FB3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
