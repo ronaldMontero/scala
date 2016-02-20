@@ -33,11 +33,29 @@ namespace MCruz
             Negocio.cedula = Convert.ToInt32(txtCed.Text);
             Negocio.nombre = txtName.Text;
             Negocio.apellido = txtSurName.Text;
-            Negocio.password = txtPass.Text;
+            Negocio.pass = txtPass.Text;
             Negocio.email = txtEmail.Text;
             Negocio.estado = Int16.Parse(txtEstado.Text);
             Negocio.rol = short.Parse(txtRol.Text);
             Negocio.RegistrarUsuario();
+        }
+
+        protected void btnModificarUsuario_Click(object sender, EventArgs e)
+        {
+            Negocio.cedula = Convert.ToInt32(txtCed.Text);
+            Negocio.nombre = txtName.Text;
+            Negocio.apellido = txtSurName.Text;
+            Negocio.pass = txtPass.Text;
+            Negocio.email = txtEmail.Text;
+            Negocio.estado = Int16.Parse(txtEstado.Text);
+            Negocio.rol = short.Parse(txtRol.Text);
+            Negocio.Modificar_Usuario();
+        }
+
+        protected void btnBorrarUsuario_Click(object sender, EventArgs e)
+        {
+            Negocio.cedula = Convert.ToInt32(txtCed.Text);
+            Negocio.Borrar_Usuario();
         }
     }
 

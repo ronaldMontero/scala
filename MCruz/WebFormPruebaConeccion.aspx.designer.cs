@@ -94,6 +94,24 @@ namespace MCruz {
         protected global::System.Web.UI.WebControls.Button btnRegistrar;
         
         /// <summary>
+        /// btnModificarUsuario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnModificarUsuario;
+        
+        /// <summary>
+        /// btnBorrarUsuario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBorrarUsuario;
+        
+        /// <summary>
         /// GridView1 control.
         /// </summary>
         /// <remarks>

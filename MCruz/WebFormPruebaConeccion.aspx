@@ -46,7 +46,8 @@
                 <td class="auto-style1"></td>
             </tr>
             <tr>
-                <td>Password</td>
+                <td>Password
+                </td>
                 <td class="auto-style2">
                     <asp:TextBox ID="txtPass" runat="server"></asp:TextBox>
                 </td>
@@ -73,6 +74,8 @@
                 </td>
                 <td class="auto-style1">
                     <asp:Button ID="btnRegistrar" runat="server" OnClick="btnRegistrar_Click" Text="Registrar Usuario" />
+                    <asp:Button ID="btnModificarUsuario" runat="server" OnClick="btnModificarUsuario_Click" Text="Modificar Usuario" />
+                    <asp:Button ID="btnBorrarUsuario" runat="server" OnClick="btnBorrarUsuario_Click" Text="Borrar Usuario" />
                 </td>
             </tr>
         </table>
@@ -82,7 +85,7 @@
                 <asp:BoundField DataField="Cedula" HeaderText="Cedula" ReadOnly="True" SortExpression="Cedula" />
                 <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
                 <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
-                <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
+                <asp:BoundField DataField="Pass" HeaderText="Pass" SortExpression="Pass" />
                 <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                 <asp:BoundField DataField="Estado" HeaderText="Estado" SortExpression="Estado" />
                 <asp:BoundField DataField="Rol" HeaderText="Rol" SortExpression="Rol" />
