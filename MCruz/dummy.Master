@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="dummy.master.cs" Inherits="dummyMP.dummy" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>SCA-LA - Sistema de Control Administrativo</title>
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/lib/bootstrap.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
+    <asp:ContentPlaceHolder ID="head" runat="server" >
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <header>
+        <div id="logo">
+            <span>
+                Sistema de Control Administrativo
+            </span><br /><br />
+            <span class="author-info">
+            <asp:ContentPlaceHolder ID="phCompania" runat="server">
+
+            </asp:ContentPlaceHolder>
+            </span>
+        </div>
+    </header>
+    <div id="color-line"></div>
+    <main>
+        <aside id="menu">
+            <div id="navigation">
+                <div class="profile-picture">
+                    <asp:ContentPlaceHolder ID="phDatosUsuario" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </div>
+                    <asp:ContentPlaceHolder ID="phMenu" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+            </div>
+        </aside>
+        <div id="wrapper">
+            <asp:ContentPlaceHolder ID="phTituloContenido" runat="server">
+
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="phContenido" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+    </main>
+    <div>
+
+    </div>
+    </form>
+    <!-- Vendor scripts -->
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script src="scripts/jquery.slimscroll.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/metisMenu.min.js"></script>
+    <script src="scripts/icheck.min.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
