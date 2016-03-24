@@ -91,7 +91,7 @@
                 <asp:BoundField DataField="Rol" HeaderText="Rol" SortExpression="Rol" />
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=HIVECLUSTER;Initial Catalog=MCruzDB;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [Usuario]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=.;Initial Catalog=MCruzDB;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [Usuario]"></asp:SqlDataSource>
         <br />
         <br />
     </form>

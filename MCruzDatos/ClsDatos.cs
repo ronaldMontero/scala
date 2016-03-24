@@ -10,7 +10,7 @@ namespace MCruzDatos
 {
     public class ClsDatos
     {
-        public SqlConnection con = new SqlConnection("Data Source=HIVECLUSTER;Initial Catalog=MCruzDB;Integrated Security=True");
+        public SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=MCruzDB;Integrated Security=True");
 
         public void Conectar()
         {

@@ -10,24 +10,6 @@
     <p class="userName">Nombre Apellido </p>
     <p>Administrador</p>
 </asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="phMenu" runat="server">
-    <ul class="nav" id="side-menu">
-        <li class="active"><a href="dashboard.aspx">Panel de control</a></li>
-        <li><a href="#">Clientes</a></li>
-        <li>
-            <a href="#">
-                <span class="nav-label">Proyectos</span>
-                <span class="fa arrow"></span> 
-            </a>
-            <ul class="nav nav-second-level collapse in" aria-expanded="true">
-                <li><a href="#">Estado General</a></li>
-                <li><a href="#">Listado de Proyectos</a></li>
-                <li><a href="#">Archivo</a></li>
-            </ul>
-        <li><a href="#">Usuarios</a></li>
-        <li><a href="#">Facturación</a></li>
-    </ul>
-</asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="phTituloContenido" runat="server">
     <div class="normalheader transition animated fadeIn small-header">
     <div class="hpanel">
@@ -54,7 +36,7 @@
                         <span class="label label-success pull-right">NEW</span>
                         <div class="row">
                             <div class="col-sm-8">
-                                <h4><a href=""> Proyectos</a></h4>
+                                <h4><a href="#"> Proyectos</a></h4>
 
                                 <p>
                                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has..

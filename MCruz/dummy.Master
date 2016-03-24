@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>SCA-LA - Sistema de Control Administrativo</title>
     <link href="css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/lib/bootstrap-datepicker3.min.css" />
     <link href="css/lib/bootstrap.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
     <asp:ContentPlaceHolder ID="head" runat="server" >
@@ -35,9 +36,22 @@
         
                     </asp:ContentPlaceHolder>
                 </div>
-                    <asp:ContentPlaceHolder ID="phMenu" runat="server">
-        
-                    </asp:ContentPlaceHolder>
+                <ul class="nav" id="side-menu">
+                    <li><a href="dashboard.aspx">Panel de control</a></li>
+                    <li><a href="clientes.aspx">Clientes</a></li>
+                    <li>
+                        <a href="#">
+                            <span class="nav-label">Proyectos</span>
+                            <span class="fa arrow"></span> 
+                        </a>
+                        <ul class="nav nav-second-level collapse in" aria-expanded="true">
+                            <li><a href="#">Estado General</a></li>
+                            <li><a href="#">Listado de Proyectos</a></li>
+                            <li><a href="#">Archivo</a></li>
+                        </ul>
+                    <li><a href="#">Usuarios</a></li>
+                    <li><a href="#">Facturación</a></li>
+                </ul>
             </div>
         </aside>
         <div id="wrapper">
@@ -58,8 +72,13 @@
     <script src="scripts/jquery-ui.min.js"></script>
     <script src="scripts/jquery.slimscroll.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/metisMenu.min.js"></script>
+    <script src="scripts/metisMenu.js"></script>
     <script src="scripts/icheck.min.js"></script>
     <script src="scripts/index.js"></script>
+    <script src="scripts/bootstrap-datepicker.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="additionalScripts" runat="server">
+    <!-- Placeholder specific scripts -->
+    </asp:ContentPlaceHolder>
 </body>
 </html>
