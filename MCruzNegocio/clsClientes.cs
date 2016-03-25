@@ -68,9 +68,28 @@ namespace MCruzNegocio
             set { cl_Cedula = value; }
         }
 
-        public DataTable ListadoTotal()
+        public DataTable VerClientes()
+        {
+            return cl.Listado("spClientes", null);
+        }
+        public DataTable Listado()
         {
             return cl.Listado("spTodosClientes", null);
+        }
+        public DataTable ListadoFiltrado() 
+        {
+            List<ClsParametro> lstParam = new List<ClsParametro>();
+            try
+            {
+                lstParam.Add(new ClsParametro("@nombre", cl_Nombre_Cliente));
+                lstParam.Add(new ClsParametro("@tipoCliente", cl_Tipo_de_Cliente));
+                lstParam.Add(new ClsParametro("@clasificacion", cl_Categoria_Cliente));
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+            return cl.Listado("spListarClientes", lstParam);
         }
     }
 }

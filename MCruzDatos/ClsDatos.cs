@@ -44,6 +44,10 @@ namespace MCruzDatos
                     }
                     da.Fill(dt);
                 }
+                else
+                {
+                    da.Fill(dt);
+                }
             }
             catch (Exception ex)
             {

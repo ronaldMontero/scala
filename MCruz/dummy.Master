@@ -6,14 +6,14 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>SCA-LA - Sistema de Control Administrativo</title>
-    <link href="css/main.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/lib/bootstrap-datepicker3.min.css" />
-    <link href="css/lib/bootstrap.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet"/>
+    <link href="css/lib/bootstrap.css" rel="stylesheet"/>
+    <link href="css/lib/bootstrap-datepicker3.min.css" rel="stylesheet"/>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
     <asp:ContentPlaceHolder ID="head" runat="server" >
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body class="fixed-sidebar fixed-navbar">
     <form id="form1" runat="server">
     <header>
         <div id="logo">
@@ -21,50 +21,62 @@
                 Sistema de Control Administrativo
             </span><br /><br />
             <span class="author-info">
-            <asp:ContentPlaceHolder ID="phCompania" runat="server">
-
-            </asp:ContentPlaceHolder>
+                Miguel Cruz y Asociados Ltda.
             </span>
         </div>
+    <div id="color-line"></div>    
     </header>
-    <div id="color-line"></div>
-    <main>
-        <aside id="menu">
-            <div id="navigation">
-                <div class="profile-picture">
-                    <asp:ContentPlaceHolder ID="phDatosUsuario" runat="server">
-        
+    <aside id="menu">
+        <div id="navigation">
+            <div class="profile-picture">
+                <asp:ContentPlaceHolder ID="phDatosUsuario" runat="server">
+    
+                </asp:ContentPlaceHolder>
+            </div>
+            <ul class="nav" id="side-menu">
+                <li><a href="dashboard.aspx">Panel de control</a></li>
+                <li>
+                    <a href="clientes.aspx">
+                        <span class="nav-label">Clientes</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
+                        <li><a href="mantenimientoClientes.aspx">Mantenimiento</a></li>
+                        <li><a href="#">Estado Financiero</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="nav-label">Proyectos</span>
+                        <span class="fa arrow"></span> 
+                    </a>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
+                        <li><a href="#">Estado General</a></li>
+                        <li><a href="#">Listado de Proyectos</a></li>
+                        <li><a href="#">Archivo</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Usuarios</a></li>
+                <li><a href="#">Facturación</a></li>
+            </ul>
+        </div>
+    </aside>
+    <div id="wrapper">
+        <div class="normalheader transition animated fadeIn small-header">
+            <div class="hpanel">
+                <div class="panel-body">
+                    <asp:ContentPlaceHolder ID="phTituloContenido" runat="server">
+
                     </asp:ContentPlaceHolder>
                 </div>
-                <ul class="nav" id="side-menu">
-                    <li><a href="dashboard.aspx">Panel de control</a></li>
-                    <li><a href="clientes.aspx">Clientes</a></li>
-                    <li>
-                        <a href="#">
-                            <span class="nav-label">Proyectos</span>
-                            <span class="fa arrow"></span> 
-                        </a>
-                        <ul class="nav nav-second-level collapse in" aria-expanded="true">
-                            <li><a href="#">Estado General</a></li>
-                            <li><a href="#">Listado de Proyectos</a></li>
-                            <li><a href="#">Archivo</a></li>
-                        </ul>
-                    <li><a href="#">Usuarios</a></li>
-                    <li><a href="#">Facturación</a></li>
-                </ul>
             </div>
-        </aside>
-        <div id="wrapper">
-            <asp:ContentPlaceHolder ID="phTituloContenido" runat="server">
-
-            </asp:ContentPlaceHolder>
-            <asp:ContentPlaceHolder ID="phContenido" runat="server">
-        
-            </asp:ContentPlaceHolder>
         </div>
-    </main>
-    <div>
 
+        <div class="content animate-panel">
+        <asp:ContentPlaceHolder ID="phContenido" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
     </div>
     </form>
     <!-- Vendor scripts -->
@@ -76,6 +88,7 @@
     <script src="scripts/icheck.min.js"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/bootstrap-datepicker.min.js"></script>
+    <script src="scripts/homer.js"></script>
 
     <asp:ContentPlaceHolder ID="additionalScripts" runat="server">
     <!-- Placeholder specific scripts -->

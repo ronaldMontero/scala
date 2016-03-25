@@ -2,31 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="phCompania" runat="server">
-    <!-- Extraer compañía de bd -->
-    Miguel Cruz y Asociados Ltda.
-</asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="phDatosUsuario" runat="server">
-    <a href="dasboard.aspx"><img src="imgs/profile.jpg" class="img-circle m-b" alt="logo"/></a>
+    <a href="dasboard.aspx"><img src="imgs/user.png" class="img-circle m-b" alt="Usuario" width="76"/></a>
     <p class="userName">Nombre Apellido </p>
-    <p>Administrador</p>
+    <p>Administrador</p>    
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="phTituloContenido" runat="server">
-    <div class="normalheader transition animated fadeIn small-header">
-        <div class="hpanel">
-            <div class="panel-body">
-                <div id="hbreadcrumb" class="pull-right">
-                    <ol class="hbreadcrumb breadcrumb">
-                        <li><a href="dashboard.aspx">Panel de Control</a></li>
-                    </ol>
-                </div>
-                <h2 class="font-light m-b-xs">
-                    Clientes
-                </h2>
-                <small>Detalles generales de clientes y búsqueda</small>
-            </div>
-        </div>
-    </div>
+    <h2 class="font-light m-b-xs">Clientes</h2>
+    <small>Detalles generales de clientes y búsqueda</small>
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="phContenido" runat="server">
     <div class="content animate-panel">
@@ -49,17 +32,11 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label">Fecha de inclusión:</label>
-                            <div class="input-group date">
-                                <asp:TextBox cssclass="form-control" ToolTip="Fecha de inclusión del cliente" ID="txtFechaInclusion" runat="server"></asp:TextBox>
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <label class="control-label">Categoría de Cliente:</label>
                             <div class="input-group">
-                                <asp:DropDownList CssClass="form-control m-b" ID="DropDownList1" runat="server" ToolTip="Seleccione la categoría de cliente">
-                                    <asp:ListItem Enabled="True" selected="True" Text="Gubernamental" Value="1"></asp:ListItem>
+                                <asp:DropDownList CssClass="form-control m-b" ID="drpCategoriaCliente" runat="server" ToolTip="Seleccione la categoría de cliente">
+                                     <asp:ListItem Enabled="True" selected="True" Text="Seleccione ..."></asp:ListItem>
+                                    <asp:ListItem Enabled="True" selected="False" Text="Gubernamental" Value="1"></asp:ListItem>
                                     <asp:ListItem Enabled="True" selected="false" Text="Comercial" Value="2"></asp:ListItem>
                                 </asp:DropDownList>
                             </div>
@@ -68,13 +45,14 @@
                             <label class="control-label">Tipo de Cliente:</label>
                             <div class="input-group">
                                 <asp:DropDownList CssClass="form-control m-b" ID="drpTipoCliente" runat="server" ToolTip="Seleccione el tipo de cliente">
-                                    <asp:ListItem Enabled="True" selected="True" Text="A" Value="A"></asp:ListItem>
+                                    <asp:ListItem Enabled="True" selected="True" Text="Seleccione ..."></asp:ListItem>
+                                    <asp:ListItem Enabled="True" selected="false" Text="A" Value="A"></asp:ListItem>
                                     <asp:ListItem Enabled="True" selected="false" Text="B" Value="B"></asp:ListItem>
                                     <asp:ListItem Enabled="True" selected="false" Text="C" Value="C"></asp:ListItem>
                                 </asp:DropDownList>
                             </div>
                         </div>
-                        <asp:Button CssClass="btn btn-success btn-block" ID="btnBuscar" Text="Buscar" runat="server"></asp:Button>
+                        <asp:Button CssClass="btn btn-success btn-block" ID="btnBuscar" Text="Buscar" runat="server" OnClick="btnBuscar_Click"></asp:Button>
                     </div>
                 </div>
             </div>    
@@ -83,7 +61,7 @@
                     <asp:Repeater ID="resBusqueda" runat="server">
                             <ItemTemplate>
                                 <div class="col-md-8">
-                                        <div class="hpanel filter-item <%# Eval("ClasificacionCliente").ToString() %>">
+                                        <div class="hpanel filter-item <%# Eval("colorCliente").ToString() %>">
                                             <a href="#">
                                                 <div class="panel-body">
                                                     <div class="pull-right text-right">
@@ -92,6 +70,7 @@
                                                         </div>
                                                     </div>
                                                     <h4 class="m-b-xs"><asp:Label ID="Nombre_Cliente" runat="server" Text='<%# Eval("Nombre_Cliente").ToString() %>'></asp:Label></h4>
+                                                    <p class="small"><asp:Label ID="TipoCliente" runat="server" Text='<%# Eval("TipoCliente").ToString() %>'></asp:Label></p>
                                                     <p class="small"><asp:Label ID="Extracto" runat="server" Text='<%# Eval("Extracto").ToString() %>'></asp:Label></p>
                                                 </div>
                                             </a>
