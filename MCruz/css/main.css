@@ -2219,6 +2219,7 @@ body.fullscreen-panel-mode {
   background-image: url("../imgs/logo.png");
   background-repeat: no-repeat;
   width: 100%;
+  background-color: #fff;
 }
 #logo span {
   font-weight: 600;
