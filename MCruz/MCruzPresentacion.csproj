@@ -98,6 +98,7 @@
     <Content Include="css\animate.css" />
     <Content Include="css\lib\bootstrap-datepicker3.min..css" />
     <Content Include="css\lib\bootstrap.css" />
+    <Content Include="css\lib\font-awesome.css" />
     <Content Include="css\main.css" />
     <Content Include="dashboard.aspx" />
     <Content Include="imgs\logo.png" />

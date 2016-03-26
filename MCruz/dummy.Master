@@ -9,6 +9,7 @@
     <link href="css/main.css" rel="stylesheet"/>
     <link href="css/lib/bootstrap.css" rel="stylesheet"/>
     <link href="css/lib/bootstrap-datepicker3.min.css" rel="stylesheet"/>
+    <link href="css/lib/font-awesome.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
     <asp:ContentPlaceHolder ID="head" runat="server" >
     </asp:ContentPlaceHolder>
