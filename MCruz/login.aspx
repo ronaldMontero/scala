@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="dummyMP.login" %>
 
+<%@ Register Src="~/LoginControl.ascx" TagPrefix="uc1" TagName="LoginControl" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -23,24 +24,7 @@
     <main>
         <div class="login-container">
             <div class="col-md-12">
-                <div class="text-center m-b-md">
-                    <h3>Ingreso a SCA-LA.</h3>
-                    <small>Utilice el usuario y password asignados a su persona para ingresar.</small>
-                </div>
-                <div class="hpanel">
-                    <div class="panel-body">
-                                <div class="form-group">
-                                    <label class="control-label" for="username">Usuario</label>
-                                    <input type="text" placeholder="nombre.apellido" title="Por favor ingrtese su usuario" required="" value="" name="username" id="username" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label" for="password">Password</label>
-                                    <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="password" id="password" class="form-control">
-                                </div>
-                                <button class="btn btn-success btn-block">Ingresar</button>
-                                <button class="btn btn-danger btn-block">Limpiar</button>
-                    </div>
-                </div>
+                <uc1:LoginControl runat="server" ID="LoginControl" />
             </div>    
         </div>
     </main>

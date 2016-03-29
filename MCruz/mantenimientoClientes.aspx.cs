@@ -14,14 +14,14 @@ namespace MCruz
         private ClsClientes cli = new ClsClientes();
         protected void Page_Load(object sender, EventArgs e)
         {
-            verClientes();
+            //verClientes();
         }
         private void verClientes()
         {
             DataTable dt = new DataTable();
-            dt = cli.VerClientes();
-            listadoClientes.DataSource = dt;
-            listadoClientes.DataBind();
+            //dt = cli.VerClientes();
+            //listadoClientes.DataSource = dt;
+            //listadoClientes.DataBind();
         }
     }
 }

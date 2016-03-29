@@ -4,16 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using MCruzNegocio;
 
-namespace dummyMP
+namespace MCruz
 {
-    public partial class dashboard : System.Web.UI.Page
+    public partial class Autorizado : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (HttpContext.Current.User.Identity.Name == "cguerrero")
-               // Response.Redirect("Login.aspx");
-            
+
         }
     }
 }

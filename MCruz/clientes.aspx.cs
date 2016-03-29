@@ -15,7 +15,7 @@ namespace MCruz
         private ClsClientes cli = new ClsClientes();
         protected void Page_Load(object sender, EventArgs e)
         {   
-            listadoGeneralClientes();
+            //listadoGeneralClientes();
         }
 
 
