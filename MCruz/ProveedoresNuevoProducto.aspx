@@ -9,8 +9,8 @@
     <p>Administrador</p>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="phTituloContenido" runat="server">
-    <h2 class="font-light m-b-xs">Agregar Nuevo Producto</h2>
-    <small>Permite Agregar un Nuevo Producto</small>
+    <h2 class="font-light m-b-xs">Productos Proveedores</h2>
+    <small>Agregar Nuevo Producto</small>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="phContenido" runat="server">
     <div class="content animate-panel">
@@ -65,6 +65,7 @@
             </div>
         </div>
     </div>
+
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="additionalScripts" runat="server">
 </asp:Content>

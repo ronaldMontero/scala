@@ -8,7 +8,7 @@
     <p>Administrador</p>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="phTituloContenido" runat="server">
-    <h2 class="font-light m-b-xs">Productos</h2>
+    <h2 class="font-light m-b-xs">Productos Proveedores</h2>
     <small>Listado de Productos</small>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="phContenido" runat="server">
@@ -20,7 +20,7 @@
                         <div class="m-b-md">
                             <div class="form-group">
                                 <label class="control-label">
-                                    Busqueda por Nombre</label>
+                                    Busqueda por Nombre:</label>
                                 <div class="input-group text">
                                     <asp:TextBox ID="txtProducto" runat="server" CssClass="form-control" ToolTip="Busqueda por Nombre de Producto"></asp:TextBox>
                                 </div>
@@ -34,20 +34,22 @@
                             </div>
                             <div class="form-group">
                                 <label class="control-label">
-                                    Busqueda por Empresa</label>
+                                    Busqueda por Empresa:</label>
                                 <div class="input-group text">
                                     <asp:TextBox ID="txtNombreEmpresa" runat="server" CssClass="form-control" ToolTip="Busqueda por Empresa"></asp:TextBox>
                                 </div>
                             </div>
                             <asp:Button CssClass="btn btn-success btn-block" ID="btnBuscar" Text="Buscar" runat="server" OnClick="btnBuscar_Click"></asp:Button>
-                            <asp:Button CssClass="btn btn-success btn-block" ID="btnMostrarTodoslosProductos" Text="Mostrar Todos los Productos" runat="server" OnClick="btnMostrarTodosLosProductos_Click"></asp:Button>
-                            <asp:Button CssClass="btn btn-success btn-block" ID="btnAgregarNuevoProducto" Text="Agregar Nuevo Producto" runat="server" OnClick="btnAgregarNuevoProducto_Click"></asp:Button>
+                            <asp:Button CssClass="btn btn-success btn-block" ID="btnAgregarNuevoProducto" Text="Crear Producto" runat="server" OnClick="btnAgregarNuevoProducto_Click"></asp:Button>
+                            <asp:Button CssClass="btn btn-success btn-block" ID="btnModProducto" Text="Modificar Producto" runat="server" OnClick="btnModProducto_Click"></asp:Button>
+                            <asp:Button CssClass="btn btn-success btn-block" ID="btnDelProducto" Text="Borrar Producto" runat="server" OnClick="btnDelNuevoProducto_Click"></asp:Button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="additionalScripts" runat="server">
 </asp:Content>

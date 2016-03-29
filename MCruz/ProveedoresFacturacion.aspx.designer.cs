@@ -49,15 +49,6 @@ namespace MCruz {
         protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
-        /// btnBuscarTodasFacturas control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscarTodasFacturas;
-        
-        /// <summary>
         /// btnNuevaFactura control.
         /// </summary>
         /// <remarks>
@@ -67,6 +58,24 @@ namespace MCruz {
         protected global::System.Web.UI.WebControls.Button btnNuevaFactura;
         
         /// <summary>
+        /// btnModFactura control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnModFactura;
+        
+        /// <summary>
+        /// btnDelFactura control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDelFactura;
+        
+        /// <summary>
         /// resBusqueda control.
         /// </summary>
         /// <remarks>
@@ -74,14 +83,5 @@ namespace MCruz {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater resBusqueda;
-        
-        /// <summary>
-        /// SqlDataSource1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

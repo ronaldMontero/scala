@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/dummy.Master" AutoEventWireup="true" CodeBehind="ProveedoresNuevaPersona.aspx.cs" Inherits="MCruz.ProveedoresNuevaPersona" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/dummy.Master" AutoEventWireup="true" CodeBehind="ProveedoresNuevaPersona.aspx.cs" Inherits="MCruz.ProveedoresNuevoPersona" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="phDatosUsuario" runat="server">
@@ -8,9 +9,9 @@
     <p>Administrador</p>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="phTituloContenido" runat="server">
-       <h2 class="font-light m-b-xs">Personas Proveedores</h2>
-    <small>Crear Nuevo Proveedor</small>
-       
+    <h2 class="font-light m-b-xs">Personas Proveedores</h2>
+    <small>Administracion de Personal de Proveedores</small>
+
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="phContenido" runat="server">
     <div class="content animate-panel">
@@ -107,13 +108,15 @@
                                 <asp:TextBox CssClass="form-control" ToolTip="Puesto del Proveedor" ID="txtPuestoProveedor" runat="server"></asp:TextBox>
                             </div>
                         </div>
-                        
+
                         <asp:Button CssClass="btn btn-success btn-block" ID="btnCrearPersonaProveedor" Text="Crear Nueva Persona" runat="server" OnClick="btnCrearPersonaProveedor_Click"></asp:Button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="additionalScripts" runat="server">
 </asp:Content>

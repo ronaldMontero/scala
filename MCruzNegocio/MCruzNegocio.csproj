@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ClsClientes.cs" />
     <Compile Include="ClsNegocio.cs" />
+    <Compile Include="ClsProveedores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

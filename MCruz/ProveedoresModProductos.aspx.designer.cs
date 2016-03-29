@@ -10,43 +10,34 @@
 namespace MCruz {
     
     
-    public partial class ProveedoresPersonas {
+    public partial class ProveedoresModProductos {
         
         /// <summary>
-        /// txtNombreProveedor control.
+        /// txtModCedula control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreProveedor;
+        protected global::System.Web.UI.WebControls.TextBox txtModCedula;
         
         /// <summary>
-        /// txtNombreEmpresa control.
+        /// drpModNombreProveedor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreEmpresa;
+        protected global::System.Web.UI.WebControls.DropDownList drpModNombreProveedor;
         
         /// <summary>
-        /// btnBuscar control.
+        /// txtModDescProveedor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscar;
-        
-        /// <summary>
-        /// btnIngresarNuevoProveedor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnIngresarNuevoProveedor;
+        protected global::System.Web.UI.WebControls.TextBox txtModDescProveedor;
         
         /// <summary>
         /// btnModificarProveedor control.
@@ -56,14 +47,5 @@ namespace MCruz {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnModificarProveedor;
-        
-        /// <summary>
-        /// btnDelProveedor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDelProveedor;
     }
 }

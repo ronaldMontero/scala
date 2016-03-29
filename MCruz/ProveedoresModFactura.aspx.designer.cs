@@ -10,132 +10,105 @@
 namespace MCruz {
     
     
-    public partial class ProveedoresNuevoPersona {
+    public partial class ProveedoresModFactura {
         
         /// <summary>
-        /// drpNombreEmpresa control.
+        /// txtNumeroFactura control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpNombreEmpresa;
+        protected global::System.Web.UI.WebControls.TextBox txtNumeroFactura;
         
         /// <summary>
-        /// txtCedula control.
+        /// drpModFacturaProveedor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCedula;
+        protected global::System.Web.UI.WebControls.DropDownList drpModFacturaProveedor;
         
         /// <summary>
-        /// txtNombre control.
+        /// txtModDescFactura control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.TextBox txtModDescFactura;
         
         /// <summary>
-        /// txtApellido1 control.
+        /// txtModFechaEntrega control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellido1;
+        protected global::System.Web.UI.WebControls.TextBox txtModFechaEntrega;
         
         /// <summary>
-        /// txtApellido control.
+        /// txtModFechaCaducidad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellido;
+        protected global::System.Web.UI.WebControls.TextBox txtModFechaCaducidad;
         
         /// <summary>
-        /// txtPrimerEmail control.
+        /// drpModEstado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrimerEmail;
+        protected global::System.Web.UI.WebControls.DropDownList drpModEstado;
         
         /// <summary>
-        /// txtSegundoEmail control.
+        /// drpModTipoPago control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSegundoEmail;
+        protected global::System.Web.UI.WebControls.DropDownList drpModTipoPago;
         
         /// <summary>
-        /// txtPrimerTelefono control.
+        /// txtModMonto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrimerTelefono;
+        protected global::System.Web.UI.WebControls.TextBox txtModMonto;
         
         /// <summary>
-        /// txtSegundoTelefono control.
+        /// txtModMontoUltimoPago control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSegundoTelefono;
+        protected global::System.Web.UI.WebControls.TextBox txtModMontoUltimoPago;
         
         /// <summary>
-        /// txtTercerTelefono control.
+        /// txtModFechaUltimoPago control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTercerTelefono;
+        protected global::System.Web.UI.WebControls.TextBox txtModFechaUltimoPago;
         
         /// <summary>
-        /// txtPrimerDireccion control.
+        /// btnModificarFactura control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrimerDireccion;
-        
-        /// <summary>
-        /// txtSegundaDireccion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSegundaDireccion;
-        
-        /// <summary>
-        /// txtPuestoProveedor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPuestoProveedor;
-        
-        /// <summary>
-        /// btnCrearPersonaProveedor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCrearPersonaProveedor;
+        protected global::System.Web.UI.WebControls.Button btnModificarFactura;
     }
 }

@@ -24,9 +24,14 @@ namespace MCruz
 
         }
 
-        protected void btnMostrarTodosLosProductos_Click(object sender, EventArgs e)
+        protected void btnModProducto_Click(object sender, EventArgs e)
         {
+            Response.Redirect("ProveedoresModProductos.aspx");
+        }
 
+        protected void btnDelNuevoProducto_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ProveedoresDelProductos.aspx");
         }
     }
 }

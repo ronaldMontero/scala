@@ -19,13 +19,19 @@ namespace MCruz
 
         }
 
-        protected void btnBuscarTodosProveedores_Click(object sender, EventArgs e)
-        {
-
-        }
         protected void btnAnadirNuevoProveedor_Click(object sender, EventArgs e)
         {
             Response.Redirect("ProveedoresNuevaPersona.aspx");
+        }
+
+        protected void btnModificarProveedor_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ProveedoresModPersona.aspx");
+        }
+
+        protected void btnDelProveedor_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ProveedoresDelPersona.aspx");
         }
     }
 }

@@ -101,6 +101,13 @@
     <Content Include="css\lib\font-awesome.css" />
     <Content Include="css\main.css" />
     <Content Include="dashboard.aspx" />
+    <Content Include="imgs\delete.png" />
+    <Content Include="imgs\edit.png" />
+    <Content Include="imgs\view.jpg" />
+    <Content Include="ProveedoresDelFactura.aspx" />
+    <Content Include="ProveedoresDelPersona.aspx" />
+    <Content Include="ProveedoresDelProductos.aspx" />
+    <Content Include="ProveedoresFacturacion.aspx" />
     <Content Include="imgs\logo.png" />
     <Content Include="imgs\profile.jpg" />
     <Content Include="imgs\user.png" />
@@ -110,6 +117,13 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="ProveedoresModFactura.aspx" />
+    <Content Include="ProveedoresModPersona.aspx" />
+    <Content Include="ProveedoresModProductos.aspx" />
+    <Content Include="ProveedoresNuevoProducto.aspx" />
+    <Content Include="ProveedoresPersonas.aspx" />
+    <Content Include="ProveedoresNuevaPersona.aspx" />
+    <Content Include="ProveedoresProductos.aspx" />
     <Content Include="scripts\bootstrap-datepicker.min.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\homer.js" />
@@ -121,6 +135,7 @@
     <Content Include="scripts\main.js" />
     <Content Include="scripts\metisMenu.js" />
     <Content Include="scripts\moment.js" />
+    <Content Include="ProveedoresNuevaFactura.aspx" />
     <Content Include="WebFormPruebaConeccion.aspx" />
     <Content Include="dummy.Master" />
     <None Include="Web.Debug.config">
@@ -157,6 +172,34 @@
     <Compile Include="dummy.Master.designer.cs">
       <DependentUpon>dummy.Master</DependentUpon>
     </Compile>
+    <Compile Include="ProveedoresDelFactura.aspx.cs">
+      <DependentUpon>ProveedoresDelFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProveedoresDelFactura.aspx.designer.cs">
+      <DependentUpon>ProveedoresDelFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedoresDelPersona.aspx.cs">
+      <DependentUpon>ProveedoresDelPersona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProveedoresDelPersona.aspx.designer.cs">
+      <DependentUpon>ProveedoresDelPersona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedoresDelProductos.aspx.cs">
+      <DependentUpon>ProveedoresDelProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProveedoresDelProductos.aspx.designer.cs">
+      <DependentUpon>ProveedoresDelProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedoresFacturacion.aspx.cs">
+      <DependentUpon>ProveedoresFacturacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProveedoresFacturacion.aspx.designer.cs">
+      <DependentUpon>ProveedoresFacturacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -172,6 +215,62 @@
       <DependentUpon>mantenimientoClientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProveedoresModFactura.aspx.cs">
+      <DependentUpon>ProveedoresModFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProveedoresModFactura.aspx.designer.cs">
+      <DependentUpon>ProveedoresModFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedoresModPersona.aspx.cs">
+      <DependentUpon>ProveedoresModPersona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProveedoresModPersona.aspx.designer.cs">
+      <DependentUpon>ProveedoresModPersona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedoresModProductos.aspx.cs">
+      <DependentUpon>ProveedoresModProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProveedoresModProductos.aspx.designer.cs">
+      <DependentUpon>ProveedoresModProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedoresNuevaFactura.aspx.cs">
+      <DependentUpon>ProveedoresNuevaFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProveedoresNuevaFactura.aspx.designer.cs">
+      <DependentUpon>ProveedoresNuevaFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedoresNuevoProducto.aspx.cs">
+      <DependentUpon>ProveedoresNuevoProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProveedoresNuevoProducto.aspx.designer.cs">
+      <DependentUpon>ProveedoresNuevoProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedoresPersonas.aspx.cs">
+      <DependentUpon>ProveedoresPersonas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProveedoresPersonas.aspx.designer.cs">
+      <DependentUpon>ProveedoresPersonas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedoresNuevaPersona.aspx.cs">
+      <DependentUpon>ProveedoresNuevaPersona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProveedoresNuevaPersona.aspx.designer.cs">
+      <DependentUpon>ProveedoresNuevaPersona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedoresProductos.aspx.cs">
+      <DependentUpon>ProveedoresProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProveedoresProductos.aspx.designer.cs">
+      <DependentUpon>ProveedoresProductos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebFormPruebaConeccion.aspx.cs">
       <DependentUpon>WebFormPruebaConeccion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -186,6 +285,7 @@
       <Name>MCruzNegocio</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

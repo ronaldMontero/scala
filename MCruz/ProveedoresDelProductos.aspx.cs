@@ -7,17 +7,16 @@ using System.Web.UI.WebControls;
 
 namespace MCruz
 {
-    public partial class ProveedoresNuevaFactura : Page
+    public partial class ProveedoresDelProductos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnCrearFactura_Click(object sender, EventArgs e)
+        protected void btnDelPersonaProveedor_Click(object sender, EventArgs e)
         {
-            Response.Redirect("dashboard.aspx");
-        }
 
+        }
     }
 }
