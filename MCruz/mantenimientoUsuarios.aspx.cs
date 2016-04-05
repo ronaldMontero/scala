@@ -4,15 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using MCruzNegocio;
 
-namespace dummyMP
+namespace MCruz
 {
-    public partial class dashboard : System.Web.UI.Page
+    public partial class manteniemientoUsuarios : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

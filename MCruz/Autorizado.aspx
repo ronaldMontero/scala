@@ -17,12 +17,30 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Button ID="btnEliminarProveedor" runat="server" Text="Eliminar Proveedor" Width="129px" />
+                </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
+                <td>
+                    <asp:Button ID="btnCrearProveedor" runat="server" Text="Crear Proveedor" Width="129px" />
+                </td>
                 <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="btnActualizarProveedor" runat="server" Text="Actualizar Proveedor" Width="129px" />
+                </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="btnListarProveedor" runat="server" Text="Listar Proveedor" Width="129px" />
+                </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>

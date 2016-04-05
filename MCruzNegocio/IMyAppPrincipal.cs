@@ -8,8 +8,11 @@ namespace MCruzNegocio
 	public interface IMyAppPrincipal
 	{
 		bool IsPageEnabled(string pageName);
-//		bool IsActionEnabled(string actionName);
-		string Perfil
+        //		bool IsActionEnabled(string actionName);
+
+        bool IsActionEnabled(string accionname);
+        
+        string Perfil
 		{
 			get;
 			set;

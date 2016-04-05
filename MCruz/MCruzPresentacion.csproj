@@ -107,7 +107,9 @@
     <Content Include="imgs\user.png" />
     <Content Include="login.aspx" />
     <Content Include="LoginControl.ascx" />
+    <Content Include="mantenimientoUsuarios.aspx" />
     <Content Include="mantenimientoClientes.aspx" />
+    <Content Include="mantenimientoPermisos.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -183,12 +185,26 @@
     <Compile Include="LoginControl.ascx.designer.cs">
       <DependentUpon>LoginControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="mantenimientoUsuarios.aspx.cs">
+      <DependentUpon>mantenimientoUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mantenimientoUsuarios.aspx.designer.cs">
+      <DependentUpon>mantenimientoUsuarios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="mantenimientoClientes.aspx.cs">
       <DependentUpon>mantenimientoClientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="mantenimientoClientes.aspx.designer.cs">
       <DependentUpon>mantenimientoClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientoPermisos.aspx.cs">
+      <DependentUpon>mantenimientoPermisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mantenimientoPermisos.aspx.designer.cs">
+      <DependentUpon>mantenimientoPermisos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NoAutorizado.aspx.cs">

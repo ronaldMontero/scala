@@ -1,5 +1,10 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="dummy.master.cs" Inherits="dummyMP.dummy" %>
 
+
+
+<%@ Import Namespace="MCruzNegocio" %>
+
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -13,6 +18,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
     <asp:ContentPlaceHolder ID="head" runat="server" >
     </asp:ContentPlaceHolder>
+    
 </head>
 <body class="fixed-sidebar fixed-navbar">
     <form id="form1" runat="server">
@@ -42,8 +48,9 @@
                         <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
-                        
-                        <li><a href="mantenimientoClientes.aspx">Mantenimiento</a></li>
+                    <%ClsSeguridad user = (ClsSeguridad)HttpContext.Current.User;%>
+                    <%if (user.IsPageEnabled("/mantenimientoClientes.aspx")){%>
+                     <li><a href = "mantenimientoClientes.aspx"> Mantenimiento </a></li><%}%>                                    
                         <li><a href="#">Estado Financiero</a></li>
                     </ul>
                 </li>
@@ -58,7 +65,18 @@
                         <li><a href="#">Archivo</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Usuarios</a></li>
+                <li>
+                    <a href="#">
+                        <span class="nav-label">Seguridad</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
+                     <li><a href = "mantenimientoUsuarios.aspx"> Usuarios </a></li>                                                                           
+                    </ul>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
+                        <li><a href = "mantenimientoPermisos.aspx"> Permisos </a></li>                                   
+                    </ul>
+                </li>
                 <li><a href="#">Facturación</a></li>
             </ul>
         </div>

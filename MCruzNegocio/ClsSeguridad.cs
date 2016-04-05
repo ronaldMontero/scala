@@ -36,6 +36,10 @@ namespace MCruzNegocio
         {
             return ClsPerfil.IsPageEnabled(pageName, this._Perfil);
         }
+        public bool IsActionEnabled(string actionName)
+        {
+            return ClsPerfil.IsActionEnabled(actionName, this._Perfil);
+        }
 
         /// <summary>
         /// Propiedad con el Perfil del Usuario

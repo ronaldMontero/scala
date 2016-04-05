@@ -16,9 +16,9 @@ namespace MCruz
         {
             ClsUsuario usuario = new ClsUsuario();
             string perfil;
-            usuario.m_usuario = txtUsername.Text;
-            usuario.m_contrasena = txtPassword.Text;
-            perfil = usuario.GetPerfil(usuario.m_usuario, usuario.m_contrasena);
+            usuario.m_cuenta = txtUsername.Text;
+            usuario.m_contrasenna = txtPassword.Text;
+            perfil = usuario.GetPerfil(usuario.m_cuenta, usuario.m_contrasenna);
             if (usuario.ValidarUsuario())
             {
                 if (perfil.Length > 0) // perfil vacio significa que no fue encontrado
@@ -31,7 +31,7 @@ namespace MCruz
                         // donde guardaremos información que nos interesa
                         FormsAuthenticationTicket authTicket =
                                 new FormsAuthenticationTicket(2,  // version
-                                usuario.m_usuario,
+                                usuario.m_cuenta,
                                 DateTime.Now,
                                 DateTime.Now.AddMinutes(60),
                                 false,
