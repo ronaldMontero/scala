@@ -37,24 +37,23 @@
             <ul class="nav" id="side-menu">
                 <li><a href="dashboard.aspx">Panel de control</a></li>
                 <li>
-                    <a href="clientes.aspx">
+                    <a href="#">
                         <span class="nav-label">Clientes</span>
                         <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
                         <li><a href="mantenimientoClientes.aspx">Mantenimiento</a></li>
-                        <li><a href="#">Estado Financiero</a></li>
+                        <li><a href="mantenimientoContactos.aspx">Contactos</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">
                         <span class="nav-label">Proyectos</span>
-                        <span class="fa arrow"></span> 
+                        <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
-                        <li><a href="#">Estado General</a></li>
-                        <li><a href="#">Listado de Proyectos</a></li>
-                        <li><a href="#">Archivo</a></li>
+                        <li><a href="mantenimientoClientes.aspx">Mantenimiento</a></li>
+                        <li><a href="mantenimientoContactos.aspx">Detalle de Proyectos</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Usuarios</a></li>

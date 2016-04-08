@@ -22,6 +22,7 @@ namespace MCruzNegocio
         private string cl_Extracto;
         private DateTime cl_Fecha_Inclusion;
         private string cl_Cedula;
+        private string cl_Email_Cliente;
 
         //propiedades
 
@@ -67,6 +68,11 @@ namespace MCruzNegocio
             get { return cl_Cedula; }
             set { cl_Cedula = value; }
         }
+        public string Email_Cliente
+        {
+            get { return cl_Email_Cliente; }
+            set { cl_Email_Cliente = value; }
+        }
 
         public DataTable VerClientes()
         {
@@ -90,6 +96,83 @@ namespace MCruzNegocio
                 throw;
             }
             return cl.Listado("spListarClientes", lstParam);
+        }
+
+        public DataTable obtenerCliente()
+        {
+            List<ClsParametro> lstParam = new List<ClsParametro>();
+            try
+            {
+                lstParam.Add(new ClsParametro("@id", cl_ID_Empresa));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return cl.Listado("spObtieneCliente", lstParam);
+        }
+
+        public DataTable borrarCliente()
+        {
+            List<ClsParametro> lstParam = new List<ClsParametro>();
+            try
+            {
+                lstParam.Add(new ClsParametro("@id", cl_ID_Empresa));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return cl.Listado("spBorrarCliente", lstParam);
+        }
+
+        public String RegistrarClientes()
+        {
+            //SqlCommand cmd;
+            List<ClsParametro> lst = new List<ClsParametro>();
+            string Mensaje = "";
+            try
+            {
+                //Pasamos parametros de entrada;
+                lst.Add(new ClsParametro("@nombre", cl_Nombre_Cliente));
+                lst.Add(new ClsParametro("@email", cl_Email_Cliente));
+                lst.Add(new ClsParametro("@telefono", cl_Telefono_empresa));
+                lst.Add(new ClsParametro("@extracto", cl_Extracto));
+                lst.Add(new ClsParametro("@tipo", cl_Tipo_de_Cliente));
+                lst.Add(new ClsParametro("@categoria", cl_Categoria_Cliente));
+                lst.Add(new ClsParametro("@cedula", cl_Cedula));
+                lst.Add(new ClsParametro("@msg", null, SqlDbType.VarChar, ParameterDirection.Output, 100));
+                cl.EjecutarSP("spRegistrarClientes", ref lst);
+                Mensaje = lst[7].Valor.ToString();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Mensaje;
+        }
+
+        public void ActualizarCliente()
+        {
+            //SqlCommand cmd;
+            List<ClsParametro> lst = new List<ClsParametro>();
+            try
+            {
+                //Pasamos parametros de entrada;
+                lst.Add(new ClsParametro("@id", cl_ID_Empresa));
+                lst.Add(new ClsParametro("@nombre", cl_Nombre_Cliente));
+                lst.Add(new ClsParametro("@email", cl_Email_Cliente));
+                lst.Add(new ClsParametro("@telefono", cl_Telefono_empresa));
+                lst.Add(new ClsParametro("@extracto", cl_Extracto));
+                lst.Add(new ClsParametro("@tipo", cl_Tipo_de_Cliente));
+                lst.Add(new ClsParametro("@categoria", cl_Categoria_Cliente));
+                lst.Add(new ClsParametro("@cedula", cl_Cedula));
+                cl.EjecutarSP("spActualizarCliente", ref lst);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
