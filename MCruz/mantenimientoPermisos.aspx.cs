@@ -36,6 +36,8 @@ namespace MCruz
         protected void btnEliminarRol_Click(object sender, EventArgs e)
         {
             Rol.descripcion = ddlRoles1.SelectedValue;
+            Rol.DeleteAsocRolPermission(Rol.GetIdPerfil(ddlRoles1.SelectedValue));
+            
             lblRolEliminado.Text = Rol.DeletePerfil();
             cargar_RolesDropDownList();
         }

@@ -94,14 +94,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="actualizarUsuario.aspx" />
     <Content Include="Autorizado.aspx" />
     <Content Include="clientes.aspx" />
+    <Content Include="crearUsuario.aspx" />
     <Content Include="css\animate.css" />
     <Content Include="css\lib\bootstrap-datepicker3.min..css" />
     <Content Include="css\lib\bootstrap.css" />
     <Content Include="css\lib\font-awesome.css" />
     <Content Include="css\main.css" />
     <Content Include="dashboard.aspx" />
+    <Content Include="eliminarUsuario.aspx" />
+    <Content Include="Imagenes\Button-Refresh.png" />
     <Content Include="imgs\logo.png" />
     <Content Include="imgs\profile.jpg" />
     <Content Include="imgs\user.png" />
@@ -143,6 +147,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="actualizarUsuario.aspx.cs">
+      <DependentUpon>actualizarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="actualizarUsuario.aspx.designer.cs">
+      <DependentUpon>actualizarUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Autorizado.aspx.cs">
       <DependentUpon>Autorizado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -157,6 +168,13 @@
     <Compile Include="clientes.aspx.designer.cs">
       <DependentUpon>clientes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="crearUsuario.aspx.cs">
+      <DependentUpon>crearUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crearUsuario.aspx.designer.cs">
+      <DependentUpon>crearUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="dashboard.aspx.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -170,6 +188,13 @@
     </Compile>
     <Compile Include="dummy.Master.designer.cs">
       <DependentUpon>dummy.Master</DependentUpon>
+    </Compile>
+    <Compile Include="eliminarUsuario.aspx.cs">
+      <DependentUpon>eliminarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="eliminarUsuario.aspx.designer.cs">
+      <DependentUpon>eliminarUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>

@@ -13,5 +13,10 @@ namespace MCruz
         {
 
         }
+
+        protected void btnCrearRol_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -80,6 +80,19 @@ namespace MCruzNegocio
             dt = M.Listado("ListarRoles", null);
             return dt;
         }
+        public int GetIdPerfil(String Perfil)
+        {
+            List<ClsParametro> lst = new List<ClsParametro>();
+            ClsDatos M = new ClsDatos();
+            DataTable dt = new DataTable();
+            lst.Add(new ClsParametro("@Rol", Perfil));
+            int id=0;
+            dt = M.Listado("BuscarIdRol_Rol", lst);
+            if (dt.Rows.Count > 0)
+                id = Convert.ToInt32(dt.Rows[0]["idPerfil"]);
+            return id;
+        }
+
         public string AddPerfil()
         {
             List<ClsParametro> lst = new List<ClsParametro>();
@@ -169,6 +182,22 @@ namespace MCruzNegocio
                 throw;
             }
             return lst[2].Valor.ToString();
+        }
+        public string DeleteAsocRolPermission(int idRol)
+        {
+            List<ClsParametro> lst = new List<ClsParametro>();
+            ClsDatos M = new ClsDatos();
+            try
+            {
+                lst.Add(new ClsParametro("@idRol", idRol));
+                lst.Add(new ClsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100));
+                M.EjecutarSP("EliminarAsocRolPermiso", ref lst);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return lst[1].Valor.ToString();
         }
     }
 }

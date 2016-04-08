@@ -56,7 +56,8 @@ namespace MCruz
         }
         protected void btnLimpiar_Click(object sender, EventArgs e)
         {
-
+            txtUsername.Text = "";
+            txtPassword.Text = "";
         }
     }
 }
