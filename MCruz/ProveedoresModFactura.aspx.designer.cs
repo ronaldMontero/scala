@@ -22,13 +22,49 @@ namespace MCruz {
         protected global::System.Web.UI.WebControls.TextBox txtNumeroFactura;
         
         /// <summary>
-        /// drpModFacturaProveedor control.
+        /// CompareValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpModFacturaProveedor;
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+        
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
+        /// btnBuscarFactura control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBuscarFactura;
+        
+        /// <summary>
+        /// drpNombreProveedor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drpNombreProveedor;
+        
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
         /// txtModDescFactura control.
@@ -40,40 +76,31 @@ namespace MCruz {
         protected global::System.Web.UI.WebControls.TextBox txtModDescFactura;
         
         /// <summary>
-        /// txtModFechaEntrega control.
+        /// RequiredFieldValidator4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtModFechaEntrega;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
-        /// txtModFechaCaducidad control.
+        /// drpEstado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtModFechaCaducidad;
+        protected global::System.Web.UI.WebControls.DropDownList drpEstado;
         
         /// <summary>
-        /// drpModEstado control.
+        /// drpTipodePago control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpModEstado;
-        
-        /// <summary>
-        /// drpModTipoPago control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpModTipoPago;
+        protected global::System.Web.UI.WebControls.DropDownList drpTipodePago;
         
         /// <summary>
         /// txtModMonto control.
@@ -85,6 +112,24 @@ namespace MCruz {
         protected global::System.Web.UI.WebControls.TextBox txtModMonto;
         
         /// <summary>
+        /// CompareValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator2;
+        
+        /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        
+        /// <summary>
         /// txtModMontoUltimoPago control.
         /// </summary>
         /// <remarks>
@@ -92,6 +137,24 @@ namespace MCruz {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtModMontoUltimoPago;
+        
+        /// <summary>
+        /// CompareValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator3;
+        
+        /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
         /// txtModFechaUltimoPago control.

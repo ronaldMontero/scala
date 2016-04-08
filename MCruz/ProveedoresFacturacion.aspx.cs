@@ -14,12 +14,16 @@ namespace MCruz
         ClsProveedores cpr = new ClsProveedores();
         protected void Page_Load(object sender, EventArgs e)
         {
-            listadoGeneralClientes();
+      
         }
-
+        //Busqueda en Grids, habilita busqueda personalizada
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-
+                cpr.Cpr_Num_factura = Int16.Parse(txtFactura.Text);
+            
+                listadoPorFacturaClientes();
+            GridView1.Visible = false;
+            
         }
 
         protected void btnCrearNuevaFactura_Click(object sender, EventArgs e)
@@ -41,12 +45,12 @@ namespace MCruz
         {
             Response.Redirect("ProveedoresDelFactura.aspx");
         }
-        private void listadoGeneralClientes()
+        //Metodo para llenar el grid
+        private void listadoPorFacturaClientes()
         {
             DataTable dt = new DataTable();
-            dt = cpr.VerClientes();
-            resBusqueda.DataSource = dt;
-            resBusqueda.DataBind();
+            dt = cpr.VerClientesPorFactura();
+
         }
     }
 }

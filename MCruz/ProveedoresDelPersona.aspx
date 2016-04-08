@@ -22,18 +22,21 @@
                             <h4>Desligar Persona</h4>
                             <small>Permite Desligar Una Persona De Un Proveedor Existente, Esto No Borrara Los Datos De La Persona Del Sistema!
                             </small>
-                            <div class="form-group">
-                                <label class="control-label">Numero de Cedula:</label>
+                            <div class="m-b-md">
+                                <label class="control-label">Nombre Proveedor:</label>
                                 <div class="input-group">
-                                    <asp:TextBox CssClass="form-control" ToolTip="Numero de Cedula" ID="txtDelPersonaProveedor" runat="server"></asp:TextBox>
+                                    <asp:DropDownList CssClass="form-control m-b" ID="drpNombrePersona" runat="server" ToolTip="Seleccione el nombre de la empresa del proveedor" DataSourceID="SqlDataSource1" DataTextField="Resultado" DataValueField="ID_Persona">
+                                    </asp:DropDownList>
+                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MCruzDBConnectionString %>" SelectCommand="sp_ListarUsuariosABorrar" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
                                 </div>
                             </div>
-                            <asp:Button CssClass="btn btn-success btn-block" ID="btnDesligarProveedor" Text="Desligar Persona" runat="server" OnClick="btnDelPersonaProveedor_Click"></asp:Button>
                         </div>
+                        <asp:Button CssClass="btn btn-success btn-block" ID="btnDesligarProveedor" Text="Desligar Persona" runat="server" OnClick="btnDelPersonaProveedor_Click"></asp:Button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 </asp:Content>

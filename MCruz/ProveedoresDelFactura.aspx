@@ -26,7 +26,10 @@
                             <div class="form-group">
                                 <label class="control-label">Numero de Factura:</label>
                                 <div class="input-group">
-                                    <asp:TextBox CssClass="form-control" ToolTip="Numero de Factura" ID="txtDelFactura" runat="server"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ToolTip="Numero de Factura" ID="txtDelFactura" runat="server" MaxLength="9"></asp:TextBox>
+                                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txtDelFactura" ErrorMessage="Debe ingresar solo numeros" Operator="DataTypeCheck" Type="Integer" ForeColor="Red"></asp:CompareValidator>
+                                    <br />
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtDelFactura" ErrorMessage="Campo Obligatorio" ForeColor="Red"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <asp:Button CssClass="btn btn-success btn-block" ID="btnEliminarFactura" Text="Eliminar Factura" runat="server" OnClick="btnDelFactura_Click"></asp:Button>

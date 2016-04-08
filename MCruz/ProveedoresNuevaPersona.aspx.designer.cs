@@ -22,6 +22,15 @@ namespace MCruz {
         protected global::System.Web.UI.WebControls.DropDownList drpNombreEmpresa;
         
         /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        
+        /// <summary>
         /// txtCedula control.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,24 @@ namespace MCruz {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCedula;
+        
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
+        /// CompareValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
         
         /// <summary>
         /// txtNombre control.
@@ -40,6 +67,15 @@ namespace MCruz {
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
         
         /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        
+        /// <summary>
         /// txtApellido1 control.
         /// </summary>
         /// <remarks>
@@ -49,13 +85,31 @@ namespace MCruz {
         protected global::System.Web.UI.WebControls.TextBox txtApellido1;
         
         /// <summary>
-        /// txtApellido control.
+        /// RequiredFieldValidator3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellido;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        
+        /// <summary>
+        /// txtApellido2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtApellido2;
+        
+        /// <summary>
+        /// RequiredFieldValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
         /// txtPrimerEmail control.
@@ -65,6 +119,15 @@ namespace MCruz {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPrimerEmail;
+        
+        /// <summary>
+        /// RequiredFieldValidator5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
         
         /// <summary>
         /// txtSegundoEmail control.
@@ -83,6 +146,15 @@ namespace MCruz {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPrimerTelefono;
+        
+        /// <summary>
+        /// RequiredFieldValidator6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
         
         /// <summary>
         /// txtSegundoTelefono control.
@@ -112,6 +184,15 @@ namespace MCruz {
         protected global::System.Web.UI.WebControls.TextBox txtPrimerDireccion;
         
         /// <summary>
+        /// RequiredFieldValidator7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
+        
+        /// <summary>
         /// txtSegundaDireccion control.
         /// </summary>
         /// <remarks>
@@ -128,6 +209,15 @@ namespace MCruz {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPuestoProveedor;
+        
+        /// <summary>
+        /// RequiredFieldValidator8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator8;
         
         /// <summary>
         /// btnCrearPersonaProveedor control.
