@@ -34,7 +34,9 @@
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style6">&nbsp;</td>
+            <td class="auto-style6">
+                <asp:Label ID="lblEstado" runat="server"></asp:Label>
+            </td>
             <td class="auto-style4">&nbsp;</td>
         </tr>
         <tr>

@@ -111,6 +111,22 @@ namespace MCruzNegocio
             }
             return lst[5].Valor.ToString();
         }
+        public string UpdateIdDPerfil(int idViejo)
+        {
+            List<ClsParametro> lst = new List<ClsParametro>();
+            ClsDatos M = new ClsDatos();
+            try
+            {
+                lst.Add(new ClsParametro("@idPerfil", idViejo));
+                lst.Add(new ClsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100));
+                M.EjecutarSP("ActualizarIDPerfil", ref lst);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return lst[1].Valor.ToString();
+        }
 
         public int GetIdUsuario(string usuario)
         {

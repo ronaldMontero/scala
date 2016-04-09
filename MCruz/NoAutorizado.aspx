@@ -12,7 +12,7 @@
     
         <table style="width:100%;">
             <tr>
-                <td>No autorizado</td>
+                <td>Actualmente no se encuentra autorizado para ver esta pagina.</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>

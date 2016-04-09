@@ -38,6 +38,7 @@ namespace MCruz
 
         protected void btnEliminarRol_Click(object sender, EventArgs e)
         {
+            ClsUsuario Usuario = new ClsUsuario();
             Rol.descripcion = ddlRoles1.SelectedValue;
             if ((Rol.descripcion == "Administrador")||(Rol.descripcion == "UsuarioBasico"))
             {
@@ -46,6 +47,7 @@ namespace MCruz
             else
             {
                 Rol.DeleteAsocRolPermission(Rol.GetIdPerfil(ddlRoles1.SelectedValue));
+                Usuario.UpdateIdDPerfil(Rol.GetIdPerfil(ddlRoles1.SelectedValue));
                 lblRolEliminado.Text = Rol.DeletePerfil();
             }           
             cargar_RolesDropDownList();

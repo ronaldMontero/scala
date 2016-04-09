@@ -10,6 +10,7 @@ namespace MCruz
         protected void Page_Load(object sender, EventArgs e)
         {
             lblRemoverCuenta.Text = "";
+            lblEstado.Text = "";
             if (!IsPostBack)
             {
                 cargar_UsuariosDropDownList();
@@ -27,8 +28,16 @@ namespace MCruz
 
         protected void btnRemoverCuenta_Click(object sender, EventArgs e)
         {
-            Usuario.m_cuenta = ddlCuentas.SelectedValue;    
-            lblRemoverCuenta.Text = Usuario.DeleteUser();
+            Usuario.m_cuenta = ddlCuentas.SelectedValue;
+            if (Usuario.m_cuenta == "Administrador")
+            {
+                lblEstado.Text = "Administrador no puede ser eliminado";
+            }    
+            else
+            {
+                lblRemoverCuenta.Text = Usuario.DeleteUser();
+            }
+            
             cargar_UsuariosDropDownList();
         }
     }

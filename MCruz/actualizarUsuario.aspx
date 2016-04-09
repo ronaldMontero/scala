@@ -75,7 +75,7 @@
         <tr>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style4">
-                <asp:RequiredFieldValidator ID="rfvCuenta" runat="server" ControlToValidate="txtDescripcion" ErrorMessage="Verifique Cuenta"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="rfvCuenta" runat="server" ControlToValidate="txtDescripcion" ErrorMessage="Verifique Cuenta" ValidationGroup="Actualizar"></asp:RequiredFieldValidator>
             </td>
             <td class="auto-style3">&nbsp;</td>
         </tr>
@@ -91,7 +91,7 @@
         <tr>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style4">
-                <asp:RequiredFieldValidator ID="rfvContrasena" runat="server" ControlToValidate="txtContrasenna" ErrorMessage="Verifique Contraseña"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="rfvContrasena" runat="server" ControlToValidate="txtContrasenna" ErrorMessage="Verifique Contraseña" ValidationGroup="Actualizar"></asp:RequiredFieldValidator>
             </td>
             <td class="auto-style3">&nbsp;</td>
         </tr>
@@ -138,7 +138,9 @@
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style4">
+                <asp:Label ID="lblEstado" runat="server"></asp:Label>
+            </td>
             <td class="auto-style3">&nbsp;</td>
         </tr>
         <tr>
@@ -149,7 +151,7 @@
         <tr>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style4">
-                <asp:Button CssClass="btn btn-success btn-block" ID="btnActualizarUsuario" Text="Actualizar Usuario" runat="server" OnClick="btnActualizarUsuario_Click" Width="216px"></asp:Button>
+                <asp:Button CssClass="btn btn-success btn-block" ID="btnActualizarUsuario" Text="Actualizar Usuario" runat="server" OnClick="btnActualizarUsuario_Click" Width="216px" ValidationGroup="Actualizar"></asp:Button>
             </td>
             <td class="auto-style3">&nbsp;</td>
         </tr>

@@ -59,7 +59,13 @@ namespace MCruz
             User.m_cuenta = txtDescripcion.Text;
             User.m_contrasenna = txtContrasenna.Text;
             User.m_estado = Convert.ToInt32(ddlEstado.SelectedValue);
-            User.m_idrol = Perfil.GetIdPerfil(ddlRoles.SelectedValue);
+            if (User.m_cuenta =="Administrador")
+            {
+                User.m_idrol = Perfil.GetIdPerfil("Administrador");
+                lblEstado.Text ="Al Administrador no se puede cambiar el ROL";
+            }
+            else
+                User.m_idrol = Perfil.GetIdPerfil(ddlRoles.SelectedValue);
             lblActualizacionUsuario.Text = User.UpdateUser();
             txtDescripcion.Text = "";
             txtContrasenna.Text = "";
