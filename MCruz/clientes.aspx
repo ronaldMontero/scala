@@ -44,7 +44,7 @@
                         <div class="form-group">
                             <label class="control-label">Tipo de Cliente:</label>
                             <div class="input-group">
-                                <asp:DropDownList CssClass="form-control m-b" ID="drpTipoCliente" runat="server" ToolTip="Seleccione el tipo de cliente">
+                                <asp:DropDownList CssClass="form-control m-b" ID="drpTipoCliente" runat="server" ToolTip="Seleccione el tipo de cliente" style="left: 0px; top: -120px">
                                     <asp:ListItem Enabled="True" selected="True" Text="Seleccione ..."></asp:ListItem>
                                     <asp:ListItem Enabled="True" selected="false" Text="A" Value="A"></asp:ListItem>
                                     <asp:ListItem Enabled="True" selected="false" Text="B" Value="B"></asp:ListItem>

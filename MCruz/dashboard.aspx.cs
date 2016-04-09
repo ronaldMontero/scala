@@ -8,7 +8,7 @@ using MCruzNegocio;
 
 namespace dummyMP
 {
-    public partial class dashboard : System.Web.UI.Page
+    public partial class dashboard : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

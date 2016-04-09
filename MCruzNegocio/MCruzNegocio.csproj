@@ -48,6 +48,7 @@
     <Compile Include="ClsSeguridad.cs" />
     <Compile Include="ClsUsuario.cs" />
     <Compile Include="IMyAppPrincipal.cs" />
+    <Compile Include="ClsProveedores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserCache.cs" />
   </ItemGroup>
