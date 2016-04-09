@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,11 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClsAutenticacion.cs" />
     <Compile Include="ClsClientes.cs" />
     <Compile Include="ClsContactoCliente.cs" />
     <Compile Include="ClsNegocio.cs" />
+    <Compile Include="ClsPerfil.cs" />
+    <Compile Include="ClsSeguridad.cs" />
+    <Compile Include="ClsUsuario.cs" />
+    <Compile Include="IMyAppPrincipal.cs" />
     <Compile Include="ClsProveedores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserCache.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MCruzDatos\MCruzDatos.csproj">

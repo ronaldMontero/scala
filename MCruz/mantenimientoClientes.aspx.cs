@@ -21,9 +21,9 @@ namespace MCruz
         private void verClientes()
         {
             DataTable dt = new DataTable();
-            dt = cli.VerClientes();
-            listadoClientes.DataSource = dt;
-            listadoClientes.DataBind();
+            //dt = cli.VerClientes();
+            //listadoClientes.DataSource = dt;
+            //listadoClientes.DataBind();
         }
 
         protected void btnGuargar_Click(object sender, EventArgs e)
