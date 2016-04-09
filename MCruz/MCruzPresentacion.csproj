@@ -209,6 +209,8 @@
     </Compile>
     <Compile Include="eliminarUsuario.aspx.designer.cs">
       <DependentUpon>eliminarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>      
     <Compile Include="ProveedoresDelFactura.aspx.cs">
       <DependentUpon>ProveedoresDelFactura.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -272,6 +274,8 @@
     </Compile>
     <Compile Include="NoAutorizado.aspx.designer.cs">
       <DependentUpon>NoAutorizado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>      
     <Compile Include="ProveedoresModFactura.aspx.cs">
       <DependentUpon>ProveedoresModFactura.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
