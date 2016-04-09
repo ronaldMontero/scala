@@ -58,7 +58,19 @@
                     </ul>
                 </li>
                 <li><a href="#">Usuarios</a></li>
-                <li><a href="#">Facturación</a></li>
+                <li>
+                    <a href="#">
+                        <span class="nav-label">Proveedores</span>
+                        <span class="fa arrow"></span> 
+                    </a>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
+                        <li><a href="ProveedoresFacturacion.aspx">Facturacion</a></li>
+                        <li><a href="ProveedoresProductos.aspx">Catalogo de Producto</a></li>
+                        <li><a href="ProveedoresPersonas.aspx">Catalogo de Persona</a></li>
+                    </ul>
+
+                </li>
+
             </ul>
         </div>
     </aside>
