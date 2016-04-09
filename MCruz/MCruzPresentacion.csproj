@@ -99,7 +99,7 @@
     <Content Include="clientes.aspx" />
     <Content Include="crearUsuario.aspx" />
     <Content Include="css\animate.css" />
-    <Content Include="css\lib\bootstrap-datepicker3.min..css" />
+    <Content Include="css\lib\bootstrap-datepicker3.min.css" />
     <Content Include="css\lib\bootstrap.css" />
     <Content Include="css\lib\font-awesome.css" />
     <Content Include="css\main.css" />
@@ -119,6 +119,7 @@
     <Content Include="login.aspx" />
     <Content Include="LoginControl.ascx" />
     <Content Include="mantenimientoClientes.aspx" />
+    <Content Include="mantenimientoContactos.aspx" />
     <Content Include="mantenimientoPermisos.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -146,6 +147,7 @@
     <Content Include="ProveedoresNuevaFactura.aspx" />
     <Content Include="WebFormPruebaConeccion.aspx" />
     <Content Include="dummy.Master" />
+    <Content Include="css\fonts\fontawesome-webfont.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -260,12 +262,21 @@
     <Compile Include="mantenimientoClientes.aspx.designer.cs">
       <DependentUpon>mantenimientoClientes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="mantenimientoContactos.aspx.cs">
+      <DependentUpon>mantenimientoContactos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mantenimientoContactos.aspx.designer.cs">
+      <DependentUpon>mantenimientoContactos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="mantenimientoPermisos.aspx.cs">
       <DependentUpon>mantenimientoPermisos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="mantenimientoPermisos.aspx.designer.cs">
       <DependentUpon>mantenimientoPermisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NoAutorizado.aspx.cs">

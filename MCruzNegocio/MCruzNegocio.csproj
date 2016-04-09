@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ClsAutenticacion.cs" />
     <Compile Include="ClsClientes.cs" />
+    <Compile Include="ClsContactoCliente.cs" />
     <Compile Include="ClsNegocio.cs" />
     <Compile Include="ClsPerfil.cs" />
     <Compile Include="ClsSeguridad.cs" />
