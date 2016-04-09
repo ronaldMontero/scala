@@ -30,16 +30,17 @@ namespace MCruz
         {
             try
             {
-                cli.Cedula = txtCedula.Text;
+                cli.Cedula_Juridica = txtCedula.Text;
                 cli.Nombre_Cliente = txtNombreCliente.Text;
-                cli.Telefono_empresa = Convert.ToInt32(txtTelefonoCliente.Text);
-                cli.Email_Cliente = txtEmailCliente.Text;
-                cli.Fecha_Inclusion = DateTime.Now;
-                cli.Tipo_de_Cliente = Convert.ToChar(drpTipoCliente.SelectedItem.Value);
-                cli.Categoria_Cliente = Convert.ToChar(drpCategoriaCliente.SelectedItem.Value);
+                cli.Telefono_empresa = txtTelefonoCliente.Text;
+                cli.Email_Empresa = txtEmailCliente.Text;
+                cli.Tipo_Cliente = drpTipoCliente.SelectedItem.Text;
+                cli.Categoria_Cliente = drpCategoriaCliente.SelectedItem.Value;
                 cli.Extracto = txtExtracto.Text;
                 lblResultadoIngreso.Text = cli.RegistrarClientes();
                 LimpiarForm();
+                lblClienteManipulado.Text = "";
+                lblResultadoIngreso.Text = "";
                 verClientes();
             }
             catch (Exception ex)
@@ -78,7 +79,7 @@ namespace MCruz
                     {
                         lblResultadoIngreso.Text = "Editando Cliente #";
                         lblClienteManipulado.Text = cli.ID_Empresa.ToString();
-                        txtCedula.Text = dt.Rows[i]["Cedula"].ToString();
+                        txtCedula.Text = dt.Rows[i]["Cedula_Juridica"].ToString();
                         txtNombreCliente.Text = dt.Rows[i]["Nombre_Cliente"].ToString();
                         txtEmailCliente.Text = dt.Rows[i]["Email"].ToString();
                         txtTelefonoCliente.Text = dt.Rows[i]["Telefono"].ToString();
@@ -96,18 +97,19 @@ namespace MCruz
             try
             {
                 cli.ID_Empresa = Convert.ToInt32(lblClienteManipulado.Text);
-                cli.Cedula = txtCedula.Text;
+                cli.Cedula_Juridica = txtCedula.Text;
                 cli.Nombre_Cliente = txtNombreCliente.Text;
-                cli.Telefono_empresa = Convert.ToInt32(txtTelefonoCliente.Text);
-                cli.Email_Cliente = txtEmailCliente.Text;
-                cli.Fecha_Inclusion = DateTime.Now;
-                cli.Tipo_de_Cliente = Convert.ToChar(drpTipoCliente.SelectedItem.Value == "Comercial" ? 2 : 1);
-                cli.Categoria_Cliente = Convert.ToChar(drpCategoriaCliente.SelectedItem.Value);
+                cli.Telefono_empresa = txtTelefonoCliente.Text;
+                cli.Email_Empresa = txtEmailCliente.Text;
+                cli.Tipo_Cliente = drpTipoCliente.SelectedItem.Value;
+                cli.Categoria_Cliente = drpCategoriaCliente.SelectedItem.Value;
                 cli.Extracto = txtExtracto.Text;
                 cli.ActualizarCliente();
                 verClientes();
+                lblClienteManipulado.Text = "";
+                lblResultadoIngreso.Text = "";
                 LimpiarForm();
-a
+
                 //Response.Redirect(Request.RawUrl);
             }
             catch (Exception ex)

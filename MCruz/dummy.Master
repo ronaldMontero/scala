@@ -30,9 +30,9 @@
     <aside id="menu">
         <div id="navigation">
             <div class="profile-picture">
-                <asp:ContentPlaceHolder ID="phDatosUsuario" runat="server">
-    
-                </asp:ContentPlaceHolder>
+                <a href="dasboard.aspx"><img src="imgs/user.png" class="img-circle m-b" alt="Usuario" width="76"/></a>
+                <p class="userName">Nombre Apellido </p>
+                <p>Salir</p>   
             </div>
             <ul class="nav" id="side-menu">
                 <li><a href="dashboard.aspx">Panel de control</a></li>
@@ -42,6 +42,7 @@
                         <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
+                        <li><a href="clientes.aspx">Búsqueda</a></li>
                         <li><a href="mantenimientoClientes.aspx">Mantenimiento</a></li>
                         <li><a href="mantenimientoContactos.aspx">Contactos</a></li>
                     </ul>

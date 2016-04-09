@@ -21,21 +21,14 @@ namespace MCruz
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
+            DataTable dt = new DataTable();
             if (txtNombreCliente.Text.Length > 0)
             {
                 cli.Nombre_Cliente = txtNombreCliente.Text;
             }
-
-            if (drpTipoCliente.SelectedValue != "Seleccione ...")
-            {
-                cli.Tipo_de_Cliente = Convert.ToChar(drpTipoCliente.SelectedValue);
-            }
-
-            if (drpCategoriaCliente.SelectedValue != "Seleccione ...")
-            {
-                cli.Categoria_Cliente = Convert.ToChar(drpCategoriaCliente.SelectedValue);
-            }
-            cli.ListadoFiltrado();
+            dt = cli.ListadoFiltrado();
+            resBusqueda.DataSource = dt;
+            resBusqueda.DataBind();
         }
 
         private void listadoGeneralClientes() {

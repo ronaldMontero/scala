@@ -1,11 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/dummy.Master" AutoEventWireup="true" CodeBehind="mantenimientoClientes.aspx.cs" Inherits="MCruz.mantenimientoClientes" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="phDatosUsuario" runat="server">
-    <a href="dasboard.aspx"><img src="imgs/user.png" class="img-circle m-b" alt="Usuario" width="76"/></a>
-    <p class="userName">Nombre Apellido </p>
-    <p>Administrador</p>    
-</asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="phTituloContenido" runat="server">
     <h2 class="font-light m-b-xs">
         Clientes
@@ -40,7 +35,7 @@
                                 <tr>
                                     <td><%# Eval("ID_Empresa").ToString() %></td>
                                     <td><%# Eval("Nombre_Cliente").ToString() %></td>
-                                    <td><%# Eval("Cedula").ToString() %></td>
+                                    <td><%# Eval("Cedula_Juridica").ToString() %></td>
                                     <td><%# Eval("Email").ToString() %></td>
                                     <td><%# Eval("Telefono").ToString() %></td>
                                     <td><%# Eval("Tipo_Cliente").ToString() %></td>
@@ -88,7 +83,8 @@
                         <label class="col-sm-2 control-label">Teléfono</label>
                         <div class="col-sm-4">
                             <asp:TextBox ID="txtTelefonoCliente" runat="server" CssClass="form-control"></asp:TextBox>
-                            <small>88445511</small>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtTelefonoCliente" ErrorMessage="Formato incorrecto (###)####-####" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))? \d{4}-\d{4}" ValidationGroup="asignarPersonasContacto"> </asp:RegularExpressionValidator>
+                            <small>(###)####-####</small>
                         </div>
                     </div>
                     <div class="hr-line-dashed"></div>
