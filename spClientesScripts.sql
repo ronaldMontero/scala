@@ -159,3 +159,107 @@ AS
 	  AND (@nombre is null OR
 		   Nombre LIKE '%'+ @nombre +'%');
 GO
+
+CREATE PROCEDURE spBorrarContacto
+	@id int = null,
+	@eliminaContacto bit = 0
+AS
+BEGIN 
+	DELETE 
+	  FROM Contacto_Cliente
+	 WHERE ID_Persona = @id
+
+    IF @eliminaContacto <> 0
+		DELETE 
+		  FROM Persona
+		 WHERE ID_Persona = @id
+	  
+END
+GO
+
+CREATE PROCEDURE spObtieneContacto
+	@id int = null
+AS
+BEGIN 
+	SELECT p.ID_Persona,
+		   p.Cedula,
+		   p.Nombre,
+		   p.Apellido1,
+		   p.Apellido2,
+		   p.Email,
+		   p.Email2,
+		   p.Telefono1,
+		   p.Telefono2,
+		   p.Telefono3,
+		   p.Direccion1,
+		   p.Direccion2,
+		   ISNULL(e.Nombre_Cliente, 'No Asignado') as Empresa,
+		   cc.ID_Empresa
+	FROM Persona p
+	LEFT OUTER JOIN Contacto_Cliente cc
+	ON p.ID_Persona = cc.ID_Persona
+	LEFT OUTER JOIN Empresa e
+	ON cc.ID_Empresa = e.ID_Empresa
+	WHERE 1 = 1
+      AND (@id is null OR 
+	       p.ID_Persona = @id);	
+END
+GO
+
+CREATE PROCEDURE spActualizarContacto
+	@idPersona int = null,
+	@cedula int = null,
+	@nombre varchar(35) = null,
+	@apellido1 varchar(50) = null,
+	@apellido2 varchar(50) = null,
+	@email1 varchar(75) = null,
+	@email2 varchar(75) = null,
+	@telefono1 varchar(25) = null,
+	@telefono2 varchar(25) = null,
+	@telefono3 varchar(25) = null,
+	@direccion1 text = null,
+	@direccion2 text = null,
+	@idCliente int = null
+AS
+BEGIN 
+	DECLARE 
+	@existeAsociacion int = 0
+
+UPDATE Persona
+   SET Cedula = @cedula
+      ,Nombre = @nombre
+      ,Apellido1 = @apellido1
+      ,Apellido2 = @apellido2
+      ,Email = @email1
+      ,Email2 = @email2
+      ,Telefono1 = @telefono1
+      ,Telefono2 = @telefono2
+      ,Telefono3 = @telefono3
+      ,Direccion1 = @direccion1
+      ,Direccion2 = @direccion2
+ WHERE ID_Persona = @idPersona
+
+	SELECT @existeAsociacion = COUNT(1) 
+	  FROM Contacto_Cliente
+	 WHERE 1 = 1 
+	   AND (@idPersona is null OR 
+	       ID_Persona = @idPersona)
+	   AND (@idCliente is null OR 
+	       ID_Empresa = @idCliente)
+
+	IF @existeAsociacion = 0 AND @idCliente IS NOT NULL
+		BEGIN
+			INSERT INTO Contacto_Cliente 
+						(ID_Empresa, 
+						ID_Persona)
+					VALUES (@idCliente,
+							@idPersona)
+		END
+	ELSE
+		BEGIN
+			UPDATE Contacto_Cliente
+			   SET ID_Empresa = @idCliente
+			 WHERE ID_Persona = @idPersona
+		END
+END
+GO

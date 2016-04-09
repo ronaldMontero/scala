@@ -103,18 +103,18 @@ namespace MCruzNegocio
             return cl.Listado("spObtieneCliente", lstParam);
         }
 
-        public DataTable borrarCliente()
+        public void borrarCliente()
         {
             List<ClsParametro> lstParam = new List<ClsParametro>();
             try
             {
                 lstParam.Add(new ClsParametro("@id", cl_ID_Empresa));
+                cl.EjecutarSP("spBorrarCliente", ref lstParam);
             }
             catch (Exception)
             {
                 throw;
             }
-            return cl.Listado("spBorrarCliente", lstParam);
         }
 
         public String RegistrarClientes()

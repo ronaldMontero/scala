@@ -89,6 +89,7 @@
                             <asp:TextBox ID="txtApellido2" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                    </div>
+                   <asp:HiddenField ID="hdID_Persona" Value="" runat="server" />
                 </div>
             </div>
         </div>
@@ -179,7 +180,7 @@
         <div class="panel-body">
             <asp:Button ID="btnCancelarGeneral" CssClass="btn btn-default" Text="Cancelar" ValidationGroup="asignarPersonasContacto" runat="server" />
             <asp:Button ID="btnGuardar" CssClass="btn btn-primary" Text="Guardar" ValidationGroup="asignarPersonasContacto" runat="server" OnClick="btnGuardar_Click" />
-            <asp:Button ID="btnActualizar" CssClass="btn btn-primary" Text="Actualizar" ValidationGroup="asignarPersonasContacto" runat="server" />
+            <asp:Button ID="btnActualizar" CssClass="btn btn-primary" Text="Actualizar" ValidationGroup="asignarPersonasContacto" runat="server" OnClick="btnActualizar_Click" />
         </div>
     </div>
     <div class="col-lg-6">
@@ -208,17 +209,18 @@
                             <tr>
                                 <th>Nombre Contacto</th>
                                 <th>Empresa</th>
-                                <th colspan="2">Acciones</th>
+                                <th colspan="3">Acciones</th>
                             </tr>
                             </thead>
                             <tbody>
-                                <asp:Repeater ID="listarContactos" runat="server">
+                                <asp:Repeater ID="listarContactos" OnItemCommand="listarContactos_ItemCommand" runat="server">
                                     <ItemTemplate>
                                     <tr>
                                         <td><%#Eval("Nombre") %> <%#Eval("Apellido1") %></td>
                                         <td><%#Eval("Empresa") %></td>
                                         <td class="text-center"><asp:LinkButton CssClass="btn btn-success" ID="btnEditar_ItemCommand" CommandName="Editar" CommandArgument='<%#Eval("ID_Persona") %>' runat="server" Text="Editar"></asp:LinkButton></td>
-                                        <td class="text-center"><asp:LinkButton CssClass="btn btn-danger" ID="btnBorrar_ItemCommand" CommandName="Borrar" CommandArgument='<%#Eval("ID_Persona") %>' runat="server" Text="Eliminar" OnClientClick='javascript:return confirm("Está seguro que desea borrar este contacto?")' ></asp:LinkButton></td>
+                                        <td class="text-center"><asp:LinkButton CssClass="btn btn-warning" ID="btnEliminaAsociacion_ItemCommand" CommandName="EliminaAsociacion" CommandArgument='<%#Eval("ID_Persona") %>' runat="server" Text="Desasociar" OnClientClick='javascript:return confirm("Está seguro que desea desasociar este contacto?")' ></asp:LinkButton></td>
+                                        <td class="text-center"><asp:LinkButton CssClass="btn btn-danger" ID="btnBorrar_ItemCommand" CommandName="Borrar" CommandArgument='<%#Eval("ID_Persona") %>' runat="server" Text="Eliminar" OnClientClick='javascript:return confirm("Está seguro que desea elimnar este contacto?")' ></asp:LinkButton></td>
                                     </tr>
                                     </ItemTemplate>
                                 </asp:Repeater>

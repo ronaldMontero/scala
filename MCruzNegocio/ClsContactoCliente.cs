@@ -228,6 +228,50 @@ namespace MCruzNegocio
             return ct.Listado("spListarContactos", lstParam);
         }
 
+        public void borrarAsociacion()
+        {
+            List<ClsParametro> lstParam = new List<ClsParametro>();
+            try
+            {
+                lstParam.Add(new ClsParametro("@id", ct_ID_Persona));
+                lstParam.Add(new ClsParametro("@eliminaContacto", '0'));
+                ct.EjecutarSP("spBorrarContacto", ref lstParam);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void borrarContacto()
+        {
+            List<ClsParametro> lstParam = new List<ClsParametro>();
+            try
+            {
+                lstParam.Add(new ClsParametro("@id", ct_ID_Persona));
+                lstParam.Add(new ClsParametro("@eliminaContacto", '1'));
+                ct.EjecutarSP("spBorrarContacto", ref lstParam);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public DataTable obtenerContacto()
+        {
+            List<ClsParametro> lstParam = new List<ClsParametro>();
+            try
+            {
+                lstParam.Add(new ClsParametro("@id", ct_ID_Persona));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return ct.Listado("spObtieneContacto", lstParam);
+        }
+
         public void RegistrarContactos()
         {
             //SqlCommand cmd;
@@ -248,6 +292,34 @@ namespace MCruzNegocio
                 lst.Add(new ClsParametro("@direccion2", ct_Direccion2));
                 lst.Add(new ClsParametro("@idCliente", ct_ID_Empresa));
                 ct.EjecutarSP("spRegistrarContactos", ref lst);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void ActualizarContacto()
+        {
+            //SqlCommand cmd;
+            List<ClsParametro> lst = new List<ClsParametro>();
+            try
+            {
+                //Pasamos parametros de entrada;
+                lst.Add(new ClsParametro("@idPersona", ct_ID_Persona));
+                lst.Add(new ClsParametro("@cedula", ct_Cedula));
+                lst.Add(new ClsParametro("@nombre", ct_nombre));
+                lst.Add(new ClsParametro("@apellido1", ct_apellido1));
+                lst.Add(new ClsParametro("@apellido2", ct_apellido2));
+                lst.Add(new ClsParametro("@email1", ct_Email));
+                lst.Add(new ClsParametro("@email2", ct_Email2));
+                lst.Add(new ClsParametro("@telefono1", ct_Telefono1));
+                lst.Add(new ClsParametro("@telefono2", ct_Telefono2));
+                lst.Add(new ClsParametro("@telefono3", ct_Telefono3));
+                lst.Add(new ClsParametro("@direccion1", ct_Direccion1));
+                lst.Add(new ClsParametro("@direccion2", ct_Direccion2));
+                lst.Add(new ClsParametro("@idCliente", ct_ID_Empresa));
+                ct.EjecutarSP("spActualizarContacto", ref lst);
             }
             catch (Exception)
             {
