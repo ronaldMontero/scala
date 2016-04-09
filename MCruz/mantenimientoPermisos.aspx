@@ -51,7 +51,9 @@
         </tr>
         <tr>
             <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style3">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtDescripcion" ErrorMessage="Verifique el ROL." ValidationGroup="CrearRol"></asp:RequiredFieldValidator>
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -61,7 +63,7 @@
                 <asp:TextBox ID="txtDescripcion" runat="server" Height="30px" Width="150px"></asp:TextBox>
             </td>
             <td>
-                        <asp:Button CssClass="btn btn-success btn-block" ID="btnCrearRol" Text="Crear Rol" runat="server" OnClick="btnCrearRol_Click" Width="150px"></asp:Button>
+                        <asp:Button CssClass="btn btn-success btn-block" ID="btnCrearRol" Text="Crear Rol" runat="server" OnClick="btnCrearRol_Click" Width="150px" ValidationGroup="CrearRol"></asp:Button>
             </td>
         </tr>
         <tr>
@@ -79,12 +81,14 @@
                 </asp:DropDownList>
             </td>
             <td>
-                        <asp:Button CssClass="btn btn-success btn-block" ID="btnEliminarRol" Text="Eliminar Rol" runat="server" OnClick="btnEliminarRol_Click" Width="150px"></asp:Button>
+                        <asp:Button CssClass="btn btn-success btn-block" ID="btnEliminarRol" Text="Eliminar Rol" runat="server" OnClick="btnEliminarRol_Click" Width="150px" CausesValidation="False"></asp:Button>
                     </td>
         </tr>
         <tr>
             <td class="auto-style4"></td>
-            <td class="auto-style5"></td>
+            <td class="auto-style5">
+                <asp:Label ID="lblEliminarRol" runat="server"></asp:Label>
+            </td>
             <td class="auto-style6">
                 <asp:Label ID="lblRolEliminado" runat="server"></asp:Label>
             </td>
@@ -100,28 +104,30 @@
                 <asp:DropDownList ID="ddlRoles2" runat="server" Height="30px" Width="150px">
                 </asp:DropDownList>
                 <br />
+                <asp:RequiredFieldValidator ID="rfv2Rol" runat="server" ControlToValidate="txtNuevaDescripcion" ErrorMessage="Verifique el ROL." ValidationGroup="ActualizarRol"></asp:RequiredFieldValidator>
                 <br />
                 <asp:TextBox ID="txtNuevaDescripcion" runat="server" Height="30px" Width="150px"></asp:TextBox>
             </td>
             <td class="auto-style9">
-                        <asp:Button CssClass="btn btn-success btn-block" ID="btnActualizarRol" Text="Actualizar Rol" runat="server" OnClick="btnActualizarRol_Click" Height="73px" Width="150px"></asp:Button>
+                        <asp:Button CssClass="btn btn-success btn-block" ID="btnActualizarRol" Text="Actualizar Rol" runat="server" OnClick="btnActualizarRol_Click" Height="73px" Width="150px" ValidationGroup="ActualizarRol"></asp:Button>
                     </td>
         </tr>
         <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>
-                <asp:Label ID="lblRolActualizado" runat="server"></asp:Label>
+            <td class="auto-style4"></td>
+            <td class="auto-style5">
+                <asp:Label ID="lblActualizarRol" runat="server"></asp:Label>
+            </td>
+            <td class="auto-style6">
             </td>
         </tr>
         <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style4"></td>
+            <td class="auto-style5"></td>
+            <td class="auto-style6"></td>
         </tr>
         <tr>
             <td class="text-left" colspan="3">
-                            <label class="control-label" style="width: 197px">Mantenimiento de Permisos</label></td>
+                            <label class="control-label" style="width: 197px">Mantenimiento de Permisosl></td>
         </tr>
         <tr>
             <td class="auto-style2">&nbsp;</td>

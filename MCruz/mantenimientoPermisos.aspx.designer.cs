@@ -13,6 +13,15 @@ namespace MCruz {
     public partial class mantenimientoPermisos {
         
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
         /// txtDescripcion control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace MCruz {
         protected global::System.Web.UI.WebControls.Button btnEliminarRol;
         
         /// <summary>
+        /// lblEliminarRol control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEliminarRol;
+        
+        /// <summary>
         /// lblRolEliminado control.
         /// </summary>
         /// <remarks>
@@ -74,6 +92,15 @@ namespace MCruz {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlRoles2;
+        
+        /// <summary>
+        /// rfv2Rol control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv2Rol;
         
         /// <summary>
         /// txtNuevaDescripcion control.
@@ -94,13 +121,13 @@ namespace MCruz {
         protected global::System.Web.UI.WebControls.Button btnActualizarRol;
         
         /// <summary>
-        /// lblRolActualizado control.
+        /// lblActualizarRol control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRolActualizado;
+        protected global::System.Web.UI.WebControls.Label lblActualizarRol;
         
         /// <summary>
         /// ddlRoles3 control.

@@ -31,6 +31,15 @@ namespace MCruz {
         protected global::System.Web.UI.WebControls.TextBox txtNombreUsuario;
         
         /// <summary>
+        /// frvCuenta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator frvCuenta;
+        
+        /// <summary>
         /// txtContrasenna control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace MCruz {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtContrasenna;
+        
+        /// <summary>
+        /// frvContrasena control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator frvContrasena;
         
         /// <summary>
         /// ddlEstado control.

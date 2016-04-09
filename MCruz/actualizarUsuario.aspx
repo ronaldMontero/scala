@@ -74,7 +74,9 @@
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style4">
+                <asp:RequiredFieldValidator ID="rfvCuenta" runat="server" ControlToValidate="txtDescripcion" ErrorMessage="Verifique Cuenta"></asp:RequiredFieldValidator>
+            </td>
             <td class="auto-style3">&nbsp;</td>
         </tr>
         <tr>
@@ -88,7 +90,9 @@
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style4">
+                <asp:RequiredFieldValidator ID="rfvContrasena" runat="server" ControlToValidate="txtContrasenna" ErrorMessage="Verifique Contraseña"></asp:RequiredFieldValidator>
+            </td>
             <td class="auto-style3">&nbsp;</td>
         </tr>
         <tr>

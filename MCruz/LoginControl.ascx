@@ -11,11 +11,13 @@
             <div class="hpanel">
                 <div class="panel-body">
                     <div class="form-group">
-                        <label class="control-label" for="username">Usuario</label>
+                        <label class="control-label" for="username">Usuario</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:RequiredFieldValidator ID="rfvUserValidation" runat="server" ControlToValidate="txtUsername" ErrorMessage="Por favor digite el nombre de Usuario"></asp:RequiredFieldValidator>
                         <asp:TextBox ID="txtUsername" runat="server" Cssclass="form-control"/>
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="password">Password</label>
+                        <label class="control-label" for="password">Password</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:RequiredFieldValidator ID="rvdContrasena" runat="server" ControlToValidate="txtPassword" ErrorMessage="Por favor digite la contraseña"></asp:RequiredFieldValidator>
                         <asp:TextBox ID="txtPassword" runat="server" Cssclass="form-control" TextMode="Password"/>                     
                     </div>
                     <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" Cssclass="btn btn-success btn-block" OnClick="btnIngresar_Click"  />

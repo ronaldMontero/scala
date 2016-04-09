@@ -16,8 +16,11 @@ namespace MCruz
         {
             lblCreacionRol.Text = "";
             lblRolEliminado.Text = "";
-            lblRolActualizado.Text = "";
+            lblActualizarRol.Text = "";
             lblAsignacionPermiso.Text = "";
+            lblActualizarRol.Text = "";
+            lblEliminarRol.Text = "";
+
             if (!IsPostBack)
             {
                 cargar_RolesDropDownList();
@@ -36,17 +39,30 @@ namespace MCruz
         protected void btnEliminarRol_Click(object sender, EventArgs e)
         {
             Rol.descripcion = ddlRoles1.SelectedValue;
-            Rol.DeleteAsocRolPermission(Rol.GetIdPerfil(ddlRoles1.SelectedValue));
-            
-            lblRolEliminado.Text = Rol.DeletePerfil();
+            if ((Rol.descripcion == "Administrador")||(Rol.descripcion == "UsuarioBasico"))
+            {
+                lblEliminarRol.Text = "Rol no se puede eliminar";
+            }
+            else
+            {
+                Rol.DeleteAsocRolPermission(Rol.GetIdPerfil(ddlRoles1.SelectedValue));
+                lblRolEliminado.Text = Rol.DeletePerfil();
+            }           
             cargar_RolesDropDownList();
         }
 
         protected void btnActualizarRol_Click(object sender, EventArgs e)
         {
             Rol.descripcion = ddlRoles2.SelectedValue;
-            lblRolActualizado.Text = Rol.UpdatePerfil(txtNuevaDescripcion.Text);
-            txtNuevaDescripcion.Text = "";
+            if ((Rol.descripcion == "Administrador") || (Rol.descripcion == "UsuarioBasico"))
+            {
+                lblActualizarRol.Text = "No se puede cambiar nombre";
+            }
+            else
+            {
+                lblActualizarRol.Text = Rol.UpdatePerfil(txtNuevaDescripcion.Text);
+                txtNuevaDescripcion.Text = "";
+            }
             cargar_RolesDropDownList();
         }
 

@@ -31,6 +31,15 @@ namespace MCruz {
         protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
         
         /// <summary>
+        /// rfvCuenta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCuenta;
+        
+        /// <summary>
         /// txtDescripcion control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace MCruz {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDescripcion;
+        
+        /// <summary>
+        /// rfvContrasena control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvContrasena;
         
         /// <summary>
         /// txtContrasenna control.
