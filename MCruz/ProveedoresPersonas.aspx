@@ -1,11 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/dummy.Master" AutoEventWireup="true" CodeBehind="ProveedoresPersonas.aspx.cs" Inherits="MCruz.ProveedoresPersonas" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="phDatosUsuario" runat="server">
-            <a href="WFProveedores/dasboard.aspx"><img src="imgs/user.png" class="img-circle m-b" alt="Usuario" width="76"/></a>
-    <p class="userName">Nombre Apellido </p>
-    <p>Administrador</p>  
-</asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="phTituloContenido" runat="server">
         <h2 class="font-light m-b-xs">Personas Provedores</h2>
     <small>Listado De Personas Para Proveedores</small>
