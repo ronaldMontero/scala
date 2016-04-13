@@ -24,12 +24,6 @@
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="phDatosUsuario" runat="server">
-    <a href="dasboard.aspx">
-        <img src="imgs/user.png" class="img-circle m-b" alt="Usuario" width="76" /></a>
-    <p class="userName">Nombre Apellido </p>
-    <p>Administrador</p>
-</asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="phTituloContenido" runat="server">
     <h2 class="font-light m-b-xs">Personas Proveedores</h2>
     <small>Administracion de Personal de Proveedores</small>
