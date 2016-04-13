@@ -33,7 +33,7 @@
                    <div class="hr-line-dashed"></div>
                 </div>
                 <div class="form-group">
-                    <asp:Label ID="lblEmpresaPorAsociar" runat="server"
+                    <asp:Label ID="lblEmpresaPorAsociar" cssClass="" runat="server">
                     <div class="table-responsive">
                         <table cellpadding="1" cellspacing="1" class="table table-bordered table-striped">
                             <thead>
@@ -221,7 +221,7 @@
                                         <td><%#Eval("Empresa") %></td>
                                         <td class="text-center"><asp:LinkButton CssClass="btn btn-success" ID="btnEditar_ItemCommand" CommandName="Editar" CommandArgument='<%#Eval("ID_Persona") %>' runat="server" Text="Editar"></asp:LinkButton></td>
                                         <td class="text-center"><asp:LinkButton CssClass="btn btn-warning" ID="btnEliminaAsociacion_ItemCommand" CommandName="EliminaAsociacion" CommandArgument='<%#Eval("ID_Persona") %>' runat="server" Text="Desasociar" OnClientClick='javascript:return confirm("Está seguro que desea desasociar este contacto?")' ></asp:LinkButton></td>
-                                        <td class="text-center"><asp:LinkButton CssClass="btn btn-danger" ID="btnBorrar_ItemCommand" CommandName="Borrar" CommandArgument='<%#Eval("ID_Persona") %>' runat="server" Text="Eliminar" OnClientClick='javascript:return confirm("Está seguro que desea elimnar este contacto?")' ></asp:LinkButton></td>
+                                        <td class="text-center"><asp:LinkButton CssClass="btn btn-danger" ID="btnBorrar_ItemCommand" CommandName="Borrar" CommandArgument='<%#Eval("ID_Persona") %>' runat="server" Text="Eliminar" OnClientClick='javascript:return confirm("Está seguro que desea elimnar este contacto?")' ><i class="fa fa-trash-o"></i></asp:LinkButton></td>
                                     </tr>
                                     </ItemTemplate>
                                 </asp:Repeater>

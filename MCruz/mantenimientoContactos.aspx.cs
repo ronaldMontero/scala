@@ -84,6 +84,7 @@ namespace MCruz
             {
                 case ("Asociar"):
                     hdID_Cliente.Value = e.CommandArgument.ToString();
+                    lblEmpresaPorAsociar.Text = "Asociación se completará al guardar toda la información";
                     break;
             }
         }
