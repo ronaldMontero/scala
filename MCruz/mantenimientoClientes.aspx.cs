@@ -21,9 +21,9 @@ namespace MCruz
         private void verClientes()
         {
             DataTable dt = new DataTable();
-            //dt = cli.VerClientes();
-            //listadoClientes.DataSource = dt;
-            //listadoClientes.DataBind();
+            dt = cli.VerClientes();
+            listadoClientes.DataSource = dt;
+            listadoClientes.DataBind();
         }
 
         protected void btnGuargar_Click(object sender, EventArgs e)
@@ -40,7 +40,6 @@ namespace MCruz
                 lblResultadoIngreso.Text = cli.RegistrarClientes();
                 LimpiarForm();
                 lblClienteManipulado.Text = "";
-                lblResultadoIngreso.Text = "";
                 verClientes();
             }
             catch (Exception ex)
@@ -104,10 +103,9 @@ namespace MCruz
                 cli.Tipo_Cliente = drpTipoCliente.SelectedItem.Value;
                 cli.Categoria_Cliente = drpCategoriaCliente.SelectedItem.Value;
                 cli.Extracto = txtExtracto.Text;
-                cli.ActualizarCliente();
+                lblResultadoIngreso.Text = cli.ActualizarCliente();
                 verClientes();
                 lblClienteManipulado.Text = "";
-                lblResultadoIngreso.Text = "";
                 LimpiarForm();
 
                 //Response.Redirect(Request.RawUrl);

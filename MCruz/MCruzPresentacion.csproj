@@ -106,6 +106,7 @@
     <Content Include="dashboard.aspx" />
     <Content Include="eliminarUsuario.aspx" />
     <Content Include="Imagenes\Button-Refresh.png" />
+    <Content Include="imgs\accessDenied.gif" />
     <Content Include="imgs\delete.png" />
     <Content Include="imgs\edit.png" />
     <Content Include="imgs\view.jpg" />
@@ -212,7 +213,7 @@
     <Compile Include="eliminarUsuario.aspx.designer.cs">
       <DependentUpon>eliminarUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>      
+    </Compile>
     <Compile Include="ProveedoresDelFactura.aspx.cs">
       <DependentUpon>ProveedoresDelFactura.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -286,7 +287,7 @@
     <Compile Include="NoAutorizado.aspx.designer.cs">
       <DependentUpon>NoAutorizado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>      
+    </Compile>
     <Compile Include="ProveedoresModFactura.aspx.cs">
       <DependentUpon>ProveedoresModFactura.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

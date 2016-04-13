@@ -38,7 +38,6 @@
             <div class="profile-picture">
                 <a href="dasboard.aspx"><img src="imgs/user.png" class="img-circle m-b" alt="Usuario" width="76"/></a>
                 <p class="userName">Nombre Apellido </p>
-                <p>Salir</p>   
             </div>
             <ul class="nav" id="side-menu">
                 <li><a href="dashboard.aspx">Panel de control</a></li>

@@ -103,13 +103,16 @@ namespace MCruzNegocio
             return cl.Listado("spObtieneCliente", lstParam);
         }
 
-        public void borrarCliente()
+        public string borrarCliente()
         {
             List<ClsParametro> lstParam = new List<ClsParametro>();
+            string Mensaje = "";
             try
             {
                 lstParam.Add(new ClsParametro("@id", cl_ID_Empresa));
+                lstParam.Add(new ClsParametro("@msg", null, SqlDbType.VarChar, ParameterDirection.Output, 100));
                 cl.EjecutarSP("spBorrarCliente", ref lstParam);
+                Mensaje = lstParam[1].Valor.ToString();
             }
             catch (Exception)
             {
@@ -134,7 +137,7 @@ namespace MCruzNegocio
                 lst.Add(new ClsParametro("@cedula", cl_Cedula_Juridica));
                 lst.Add(new ClsParametro("@msg", null, SqlDbType.VarChar, ParameterDirection.Output, 100));
                 cl.EjecutarSP("spRegistrarClientes", ref lst);
-                Mensaje = lst[6].Valor.ToString();
+                Mensaje = lst[7].Valor.ToString();
             }
             catch (Exception)
             {
@@ -143,10 +146,11 @@ namespace MCruzNegocio
             return Mensaje;
         }
 
-        public void ActualizarCliente()
+        public string ActualizarCliente()
         {
             //SqlCommand cmd;
             List<ClsParametro> lst = new List<ClsParametro>();
+            string Mensaje = "";
             try
             {
                 //Pasamos parametros de entrada;
@@ -158,12 +162,15 @@ namespace MCruzNegocio
                 lst.Add(new ClsParametro("@tipo", cl_Tipo_Cliente));
                 lst.Add(new ClsParametro("@categoria", cl_Categoria_Cliente));
                 lst.Add(new ClsParametro("@cedula", cl_Cedula_Juridica));
+                lst.Add(new ClsParametro("@msg", null, SqlDbType.VarChar, ParameterDirection.Output, 100));
                 cl.EjecutarSP("spActualizarCliente", ref lst);
+                Mensaje = lst[8].Valor.ToString();
             }
             catch (Exception)
             {
                 throw;
             }
+            return Mensaje;
         }
     }
 }
