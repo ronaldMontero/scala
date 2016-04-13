@@ -16,8 +16,11 @@ namespace MCruz
         protected void Page_Load(object sender, EventArgs e)
         {
             verContactos();
-            btnGuardar.Visible = true;
-            btnActualizar.Visible = false;
+            if(txtCedula.Text.Length == 0)
+            {
+                btnGuardar.Visible = true;
+                btnActualizar.Visible = false;
+            }
         }
 
         protected void btnBuscaCliente_Click(object sender, EventArgs e)
@@ -76,6 +79,7 @@ namespace MCruz
 
         protected void listadoClientes_ItemCommand(object sender, RepeaterCommandEventArgs e)
         {
+
             switch (e.CommandName)
             {
                 case ("Asociar"):

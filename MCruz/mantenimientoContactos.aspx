@@ -33,6 +33,7 @@
                    <div class="hr-line-dashed"></div>
                 </div>
                 <div class="form-group">
+                    <asp:Label ID="lblEmpresaPorAsociar" runat="server"
                     <div class="table-responsive">
                         <table cellpadding="1" cellspacing="1" class="table table-bordered table-striped">
                             <thead>
