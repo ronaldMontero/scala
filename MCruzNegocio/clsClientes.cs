@@ -120,7 +120,7 @@ namespace MCruzNegocio
             }
         }
 
-        public String RegistrarClientes()
+        public string RegistrarClientes()
         {
             //SqlCommand cmd;
             List<ClsParametro> lst = new List<ClsParametro>();
@@ -172,5 +172,17 @@ namespace MCruzNegocio
             }
             return Mensaje;
         }
+
+        public string ClientesActivos()
+        {
+            string result;
+            try{
+                result = cl.EjecutarSP("spClientesActivos", null);
+            }
+            catch (Exception ex){
+                throw ex;
+            }
+            return result;
+        }        
     }
 }

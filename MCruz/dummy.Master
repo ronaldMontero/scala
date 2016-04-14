@@ -120,6 +120,8 @@
     <script src="scripts/index.js"></script>
     <script src="scripts/bootstrap-datepicker.min.js"></script>
     <script src="scripts/homer.js"></script>
+    <script src="scripts/sweet-alert.min.js"></script>
+    <script src="scripts/toastr.min.js"></script>
 
     <asp:ContentPlaceHolder ID="additionalScripts" runat="server">
     <!-- Placeholder specific scripts -->
