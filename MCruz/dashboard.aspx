@@ -14,6 +14,7 @@
                 <div class="panel-body">
                     <div class="text-center">
                         <h3>Clientes activos</h3>
+                        <asp:Label ID="lblClientesActivos" runat="server">
                         <p class="text-big font-light">XXX</p>
                     </div>
                 </div>

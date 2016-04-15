@@ -228,7 +228,7 @@ namespace MCruzNegocio
             return ct.Listado("spListarContactos", lstParam);
         }
 
-        public void borrarAsociacion()
+        public string borrarAsociacion()
         {
             List<ClsParametro> lstParam = new List<ClsParametro>();
             try
@@ -243,7 +243,7 @@ namespace MCruzNegocio
             }
         }
 
-        public void borrarContacto()
+        public string borrarContacto()
         {
             List<ClsParametro> lstParam = new List<ClsParametro>();
             try
@@ -272,7 +272,7 @@ namespace MCruzNegocio
             return ct.Listado("spObtieneContacto", lstParam);
         }
 
-        public void RegistrarContactos()
+        public string RegistrarContactos()
         {
             //SqlCommand cmd;
             List<ClsParametro> lst = new List<ClsParametro>();
@@ -299,7 +299,7 @@ namespace MCruzNegocio
             }
         }
 
-        public void ActualizarContacto()
+        public string ActualizarContacto()
         {
             //SqlCommand cmd;
             List<ClsParametro> lst = new List<ClsParametro>();
