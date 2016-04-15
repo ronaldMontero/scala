@@ -129,19 +129,4 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="additionalScripts" runat="server">
-<script type="text/javascript">
-        // Toastr options
-        toastr.options = {
-            "debug": false,
-            "newestOnTop": false,
-            "positionClass": "toast-top-center",
-            "closeButton": true,
-            "toastClass": "animated fadeInDown",
-            "tapToDismiss": false
-        };
-
-        function sendMessage(result, msg){
-            toastr[result](msg);
-        }
-</script>
 </asp:Content>

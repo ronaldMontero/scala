@@ -29,7 +29,6 @@ namespace MCruz
         protected void btnGuargar_Click(object sender, EventArgs e)
         {
             string msg;
-            string result;
             try
             {
                 cli.Cedula_Juridica = txtCedula.Text;
@@ -40,12 +39,7 @@ namespace MCruz
                 cli.Categoria_Cliente = drpCategoriaCliente.SelectedItem.Value;
                 cli.Extracto = txtExtracto.Text;
                 msg = cli.RegistrarClientes();
-                if (msg.Contains("Error")){
-                    result = "error";
-                }else{
-                    result = "success";
-                }
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "sendMessage", "sendMessage('" + result + "', '"  + msg + "');", true);
+                lblResultadoIngreso.Text = msg.ToString();
                 LimpiarForm();
                 verClientes();
             }
@@ -69,19 +63,14 @@ namespace MCruz
         protected void listadoClientes_ItemCommand(object sender, RepeaterCommandEventArgs e)
         {
             string msg;
-            string result;
-            try{
+            try
+            {
                 switch (e.CommandName)
                 {
                     case ("Borrar"):
                         cli.ID_Empresa = Convert.ToInt32(e.CommandArgument.ToString());
                         msg = cli.borrarCliente();
-                        if (msg.Contains("Error")){
-                            result = "error";
-                        }else{
-                            result = "success";
-                        }
-                        Page.ClientScript.RegisterStartupScript(this.GetType(), "sendMessage", "sendMessage('" + result + "', '"  + msg + "');", true);                        
+                        lblResultadoIngreso.Text = msg.ToString();
                         verClientes();
                         break;
                     case ("Editar"):
@@ -113,7 +102,6 @@ namespace MCruz
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
             string msg;
-            string result;
             try
             {
                 cli.ID_Empresa = Convert.ToInt32(lblClienteManipulado.Text);
@@ -125,12 +113,7 @@ namespace MCruz
                 cli.Categoria_Cliente = drpCategoriaCliente.SelectedItem.Value;
                 cli.Extracto = txtExtracto.Text;
                 msg = cli.ActualizarCliente();
-                if (msg.Contains("Error")){
-                    result = "error";
-                }else{
-                    result = "success";
-                }
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "sendMessage", "sendMessage('" + result + "', '"  + msg + "');", true);                
+                lblResultadoIngreso.Text = msg.ToString();            
                 verClientes();
                 lblClienteManipulado.Text = "";
                 LimpiarForm();
