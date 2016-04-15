@@ -231,31 +231,39 @@ namespace MCruzNegocio
         public string borrarAsociacion()
         {
             List<ClsParametro> lstParam = new List<ClsParametro>();
+            string Mensaje;
             try
             {
                 lstParam.Add(new ClsParametro("@id", ct_ID_Persona));
                 lstParam.Add(new ClsParametro("@eliminaContacto", '0'));
+                lstParam.Add(new ClsParametro("@msg", null, SqlDbType.VarChar, ParameterDirection.Output, 150));
                 ct.EjecutarSP("spBorrarContacto", ref lstParam);
+                Mensaje = lstParam[2].Valor.ToString();
             }
             catch (Exception)
             {
                 throw;
             }
+            return Mensaje;
         }
 
         public string borrarContacto()
         {
             List<ClsParametro> lstParam = new List<ClsParametro>();
+            string Mensaje;
             try
             {
                 lstParam.Add(new ClsParametro("@id", ct_ID_Persona));
                 lstParam.Add(new ClsParametro("@eliminaContacto", '1'));
+                lstParam.Add(new ClsParametro("@msg", null, SqlDbType.VarChar, ParameterDirection.Output, 150));
                 ct.EjecutarSP("spBorrarContacto", ref lstParam);
+                Mensaje = lstParam[2].Valor.ToString();
             }
             catch (Exception)
             {
                 throw;
             }
+            return Mensaje;
         }
 
         public DataTable obtenerContacto()
@@ -276,6 +284,7 @@ namespace MCruzNegocio
         {
             //SqlCommand cmd;
             List<ClsParametro> lst = new List<ClsParametro>();
+            string Mensaje;
             try
             {
                 //Pasamos parametros de entrada;
@@ -291,18 +300,22 @@ namespace MCruzNegocio
                 lst.Add(new ClsParametro("@direccion1", ct_Direccion1));
                 lst.Add(new ClsParametro("@direccion2", ct_Direccion2));
                 lst.Add(new ClsParametro("@idCliente", ct_ID_Empresa));
+                lst.Add(new ClsParametro("@msg", null, SqlDbType.VarChar, ParameterDirection.Output, 150));
                 ct.EjecutarSP("spRegistrarContactos", ref lst);
+                Mensaje = lst[12].Valor.ToString();
             }
             catch (Exception)
             {
                 throw;
             }
+            return Mensaje;
         }
 
         public string ActualizarContacto()
         {
             //SqlCommand cmd;
             List<ClsParametro> lst = new List<ClsParametro>();
+            string Mensaje;
             try
             {
                 //Pasamos parametros de entrada;
@@ -319,12 +332,15 @@ namespace MCruzNegocio
                 lst.Add(new ClsParametro("@direccion1", ct_Direccion1));
                 lst.Add(new ClsParametro("@direccion2", ct_Direccion2));
                 lst.Add(new ClsParametro("@idCliente", ct_ID_Empresa));
+                lst.Add(new ClsParametro("@msg", null, SqlDbType.VarChar, ParameterDirection.Output, 150));
                 ct.EjecutarSP("spActualizarContacto", ref lst);
+                Mensaje = lst[13].Valor.ToString();
             }
             catch (Exception)
             {
                 throw;
             }
+            return Mensaje;
         }
     }
 }

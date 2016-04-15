@@ -45,7 +45,7 @@ namespace MCruz
                 }else{
                     result = "success";
                 }
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "sendMessage", "sendMessage(" + result + ", "  + msg + ");", true);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "sendMessage", "sendMessage('" + result + "', '"  + msg + "');", true);
                 LimpiarForm();
                 verClientes();
             }
@@ -81,7 +81,7 @@ namespace MCruz
                         }else{
                             result = "success";
                         }
-                        Page.ClientScript.RegisterStartupScript(this.GetType(), "sendMessage", "sendMessage(" + result + ", "  + msg + ");", true);                        
+                        Page.ClientScript.RegisterStartupScript(this.GetType(), "sendMessage", "sendMessage('" + result + "', '"  + msg + "');", true);                        
                         verClientes();
                         break;
                     case ("Editar"):
@@ -130,7 +130,7 @@ namespace MCruz
                 }else{
                     result = "success";
                 }
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "sendMessage", "sendMessage(" + result + ", "  + msg + ");", true);                
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "sendMessage", "sendMessage('" + result + "', '"  + msg + "');", true);                
                 verClientes();
                 lblClienteManipulado.Text = "";
                 LimpiarForm();

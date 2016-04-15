@@ -118,6 +118,7 @@ namespace MCruzNegocio
             {
                 throw;
             }
+            return Mensaje;
         }
 
         public string RegistrarClientes()
@@ -175,9 +176,12 @@ namespace MCruzNegocio
 
         public string ClientesActivos()
         {
+            List<ClsParametro> lst = new List<ClsParametro>();
             string result;
             try{
-                result = cl.EjecutarSP("spClientesActivos", null);
+                lst.Add(new ClsParametro("@msg", null, SqlDbType.VarChar, ParameterDirection.Output, 100));
+                cl.EjecutarSP("spClientesActivos", ref lst);
+                result = lst[0].Valor.ToString();
             }
             catch (Exception ex){
                 throw ex;
