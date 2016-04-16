@@ -99,9 +99,12 @@
     <Content Include="clientes.aspx" />
     <Content Include="crearUsuario.aspx" />
     <Content Include="css\animate.css" />
+    <Content Include="css\fonts\Pe-icon-7-stroke.svg" />
     <Content Include="css\lib\bootstrap-datepicker3.min.css" />
     <Content Include="css\lib\bootstrap.css" />
     <Content Include="css\lib\font-awesome.css" />
+    <Content Include="css\lib\helper.css" />
+    <Content Include="css\lib\pe-icon-7-stroke.css" />
     <Content Include="css\main.css" />
     <Content Include="dashboard.aspx" />
     <Content Include="eliminarUsuario.aspx" />
@@ -110,6 +113,7 @@
     <Content Include="imgs\delete.png" />
     <Content Include="imgs\edit.png" />
     <Content Include="imgs\view.jpg" />
+    <Content Include="perfilCliente.aspx" />
     <Content Include="ProveedoresDelFactura.aspx" />
     <Content Include="ProveedoresDelPersona.aspx" />
     <Content Include="ProveedoresDelProductos.aspx" />
@@ -149,6 +153,9 @@
     <Content Include="WebFormPruebaConeccion.aspx" />
     <Content Include="dummy.Master" />
     <Content Include="css\fonts\fontawesome-webfont.woff2" />
+    <Content Include="css\fonts\Pe-icon-7-stroke.eot" />
+    <Content Include="css\fonts\Pe-icon-7-stroke.ttf" />
+    <Content Include="css\fonts\Pe-icon-7-stroke.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -213,6 +220,13 @@
     <Compile Include="eliminarUsuario.aspx.designer.cs">
       <DependentUpon>eliminarUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="perfilCliente.aspx.cs">
+      <DependentUpon>perfilCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="perfilCliente.aspx.designer.cs">
+      <DependentUpon>perfilCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProveedoresDelFactura.aspx.cs">
       <DependentUpon>ProveedoresDelFactura.aspx</DependentUpon>

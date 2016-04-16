@@ -8,8 +8,17 @@
     <small>Mantenimiento de Contactos. Creación actualización y eliminación de contactos de clientes.</small>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="phContenido" runat="server">
+    <div class="col-lg-12" id="mensajes">
+        <div class="hpanel">
+            <div class="panel-body"
+                <div class="panel-default">
+                    <asp:Label ID="lblEmpresaPorAsociar" CssClass="col-lg-12 text-center text-primary" runat="server"></asp:Label>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="col-lg-6">
-        <h3>Formulario de mantenimiento</h3>
 <div class="hpanel">
             <div class="panel-heading">
                 <div class="panel-tools">
@@ -23,17 +32,17 @@
                    <div class="form-group">
                        <label class="col-sm-2 control-label">Cliente asociado:</label>
                        <div class="col-sm-4">
-                           <asp:TextBox ID="txtBuscaCliente" runat="server" CssClass="form-control"></asp:TextBox>
+                           <asp:TextBox ID="txtBuscaCliente" runat="server" CssClass="form-control" ValidationGroup="busquedaCliente"></asp:TextBox>
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtBuscaCliente" CssClass="danger" Display="Dynamic" ErrorMessage="Digite el nombre del cliente a buscar" ValidationGroup="busquedaCliente"></asp:RequiredFieldValidator>
                        </div>
                     </div>
                     <div class="form-group">
                         <asp:Button ID="btnCancelarBusqueda" runat="server" CssClass="btn btn-default" Text="Cancelar" />
-                        <asp:Button ID="btnBuscaCliente" runat="server" CssClass="btn btn-primary" Text="Buscar" OnClick="btnBuscaCliente_Click" />
+                        <asp:Button ID="btnBuscaCliente" runat="server" CssClass="btn btn-primary" Text="Buscar" ValidationGroup="busquedaCliente" OnClick="btnBuscaCliente_Click" />
                    </div>
                    <div class="hr-line-dashed"></div>
                 </div>
                 <div class="form-group">
-                    <asp:Label ID="lblEmpresaPorAsociar" runat="server"
                     <div class="table-responsive">
                         <table cellpadding="1" cellspacing="1" class="table table-bordered table-striped">
                             <thead>
@@ -71,19 +80,19 @@
                     <div class="form-group ">
                         <label class="col-sm-2 control-label">Cédula</label>
                         <div class="col-sm-4">
-                            <asp:TextBox ID="txtCedula" runat="server" CssClass="form-control"></asp:TextBox>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtCedula" ErrorMessage="Cédula con formato incorrecto" ValidationGroup="asignarPersonasContacto" ValidationExpression="(\d{1})([-]?)(\d{4})([-]?)(\d{4})" CssClass="alert-danger"></asp:RegularExpressionValidator>
+                            <asp:TextBox ID="txtCedula" runat="server" CssClass="form-control" ></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtCedula" ErrorMessage="Cédula con formato incorrecto"  ValidationExpression="(\d{1})([-]?)(\d{4})([-]?)(\d{4})" CssClass="alert-danger" Display="Dynamic"></asp:RegularExpressionValidator>
                         </div>
                         <label class="col-sm-2 control-label">Nombre</label>
                         <div class="col-sm-4">
-                            <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Nombre es un campo Requerido" Text=" " ControlToValidate="txtNombre" ValidationGroup="asignarPersonasContacto" CssClass="alert-danger"> </asp:RequiredFieldValidator>
+                            <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" ></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Nombre es un campo Requerido" Text=" " ControlToValidate="txtNombre"  CssClass="alert-danger" Display="Dynamic"></asp:RequiredFieldValidator>
                         </div>
                    </div>
                    
                    <div class="form-group">
                         <label class="col-sm-2 control-label">Primer Apellido</label>
                         <div class="col-sm-4">
-                            <asp:TextBox ID="txtApellido1" runat="server" CssClass="form-control"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Apellido es un campo Requerido" Text=" " ControlToValidate="txtApellido1" ValidationGroup="asignarPersonasContacto" CssClass="alert-danger"> </asp:RequiredFieldValidator>
+                            <asp:TextBox ID="txtApellido1" runat="server" CssClass="form-control" ></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Apellido es un campo Requerido" Text=" " ControlToValidate="txtApellido1"  CssClass="alert-danger" Display="Dynamic"></asp:RequiredFieldValidator>
                         </div>
                         <label class="col-sm-2 control-label">Segundo Apellido</label>
                         <div class="col-sm-4">
@@ -106,22 +115,22 @@
                    <div class="form-group">
                         <label class="col-sm-3 control-label">Teléfono #1</label>
                         <div class="col-sm-9">
-                            <asp:TextBox ID="txtTelefono1" runat="server" CssClass="form-control"></asp:TextBox>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtTelefono1" ErrorMessage="Formato incorrecto (###)####-####" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))? \d{4}-\d{4}" ValidationGroup="asignarPersonasContacto"> </asp:RegularExpressionValidator>
+                            <asp:TextBox ID="txtTelefono1" runat="server" CssClass="form-control" ></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtTelefono1" ErrorMessage="Formato incorrecto (###)####-####" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))? \d{4}-\d{4}" Display="Dynamic" ></asp:RegularExpressionValidator>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">Teléfono #2</label>
                         <div class="col-sm-9">
-                            <asp:TextBox ID="txtTelefono2" runat="server" CssClass="form-control"></asp:TextBox>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtTelefono2" ErrorMessage="Formato incorrecto (###)####-####" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))? \d{4}-\d{4}" ValidationGroup="asignarPersonasContacto"> </asp:RegularExpressionValidator>
+                            <asp:TextBox ID="txtTelefono2" runat="server" CssClass="form-control" ></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtTelefono2" ErrorMessage="Formato incorrecto (###)####-####" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))? \d{4}-\d{4}" Display="Dynamic" ></asp:RegularExpressionValidator>
                         </div>
                     </div>
                    <div class="form-group">
                         <label class="col-sm-3 control-label">Teléfono #3</label>
                         <div class="col-sm-9">
-                            <asp:TextBox ID="txtTelefono3" runat="server" CssClass="form-control"></asp:TextBox>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtTelefono3" ErrorMessage="Formato incorrecto (###)####-####" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))? \d{4}-\d{4}" ValidationGroup="asignarPersonasContacto"> </asp:RegularExpressionValidator>
+                            <asp:TextBox ID="txtTelefono3" runat="server" CssClass="form-control" ></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtTelefono3" ErrorMessage="Formato incorrecto (###)####-####" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))? \d{4}-\d{4}" Display="Dynamic" ></asp:RegularExpressionValidator>
                         </div>
                    </div>
             </div>
@@ -139,15 +148,15 @@
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Email #1</label>
                     <div class="col-sm-9">
-                        <asp:TextBox ID="txtEmail1" runat="server" CssClass="form-control"></asp:TextBox>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtEmail1" ErrorMessage="Email con Formato Incorrecto" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="asignarPersonasContacto" CssClass="alert-danger"> </asp:RegularExpressionValidator>
+                        <asp:TextBox ID="txtEmail1" runat="server" CssClass="form-control" ></asp:TextBox>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtEmail1" ErrorMessage="Email con Formato Incorrecto" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"  CssClass="alert-danger" Display="Dynamic"></asp:RegularExpressionValidator>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Email #2</label>
                     <div class="col-sm-9">
-                        <asp:TextBox ID="txtEmail2" runat="server" CssClass="form-control"></asp:TextBox>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ControlToValidate="txtEmail2" ErrorMessage="Email con Formato Incorrecto" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="asignarPersonasContacto" CssClass="alert-danger"> </asp:RegularExpressionValidator>
+                        <asp:TextBox ID="txtEmail2" runat="server" CssClass="form-control" ></asp:TextBox>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ControlToValidate="txtEmail2" ErrorMessage="Email con Formato Incorrecto" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"  CssClass="alert-danger" Display="Dynamic"></asp:RegularExpressionValidator>
                     </div>
                 </div>
             </div>
@@ -179,13 +188,12 @@
         </div>
         
         <div class="panel-body">
-            <asp:Button ID="btnCancelarGeneral" CssClass="btn btn-default" Text="Cancelar" ValidationGroup="asignarPersonasContacto" runat="server" />
-            <asp:Button ID="btnGuardar" CssClass="btn btn-primary" Text="Guardar" ValidationGroup="asignarPersonasContacto" runat="server" OnClick="btnGuardar_Click" />
-            <asp:Button ID="btnActualizar" CssClass="btn btn-primary" Text="Actualizar" ValidationGroup="asignarPersonasContacto" runat="server" OnClick="btnActualizar_Click" />
+            <asp:Button ID="btnCancelarGeneral" CssClass="btn btn-default" Text="Cancelar"  runat="server" />
+            <asp:Button ID="btnGuardar" CssClass="btn btn-primary" Text="Guardar"  runat="server" OnClick="btnGuardar_Click" />
+            <asp:Button ID="btnActualizar" CssClass="btn btn-primary" Text="Actualizar"  runat="server" OnClick="btnActualizar_Click" />
         </div>
     </div>
     <div class="col-lg-6">
-        <h3>Contactos para Editar o Borrar</h3>
         <div class="hpanel">
             <div class="panel-heading">
                 Contactos Existentes
@@ -194,12 +202,12 @@
                 <div class="form-group">
                     <label class="col-sm-4 control-label">Nombre de Contacto:</label>
                     <div class="col-sm-8">
-                        <asp:TextBox ID="txtNombreContacto" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txtNombreContacto" runat="server" CssClass="form-control" ValidationGroup="buscaContactos"></asp:TextBox>
                     </div>
                 </div>
                 <div class="form-group">
-                    <asp:Button ID="btnBuscaContactoCancelar" runat="server" CssClass="btn btn-default" Text="Cancelar" />
-                    <asp:Button ID="btnBuscaContactoBuscar" runat="server" CssClass="btn btn-primary" Text="Buscar" />
+                    <asp:Button ID="btnBuscaContactoCancelar" runat="server" CssClass="btn btn-default" Text="Cancelar" ValidationGroup="buscaContactos" />
+                    <asp:Button ID="btnBuscaContactoBuscar" runat="server" CssClass="btn btn-primary" Text="Buscar" ValidationGroup="buscaContactos" />
                 </div>  
                 <div class="hr-line-dashed"></div>              
                 <div class="form-group">
@@ -219,9 +227,9 @@
                                     <tr>
                                         <td><%#Eval("Nombre") %> <%#Eval("Apellido1") %></td>
                                         <td><%#Eval("Empresa") %></td>
-                                        <td class="text-center"><asp:LinkButton CssClass="btn btn-success" ID="btnEditar_ItemCommand" CommandName="Editar" CommandArgument='<%#Eval("ID_Persona") %>' runat="server" Text="Editar"></asp:LinkButton></td>
-                                        <td class="text-center"><asp:LinkButton CssClass="btn btn-warning" ID="btnEliminaAsociacion_ItemCommand" CommandName="EliminaAsociacion" CommandArgument='<%#Eval("ID_Persona") %>' runat="server" Text="Desasociar" OnClientClick='javascript:return confirm("Está seguro que desea desasociar este contacto?")' ></asp:LinkButton></td>
-                                        <td class="text-center"><asp:LinkButton CssClass="btn btn-danger" ID="btnBorrar_ItemCommand" CommandName="Borrar" CommandArgument='<%#Eval("ID_Persona") %>' runat="server" Text="Eliminar" OnClientClick='javascript:return confirm("Está seguro que desea elimnar este contacto?")' ></asp:LinkButton></td>
+                                        <td class="text-center"><asp:LinkButton CssClass="btn btn-success" ID="btnEditar_ItemCommand" CommandName="Editar" CommandArgument='<%#Eval("ID_Persona") %>' runat="server" Text="Editar" ValidationGroup="manipulaContactos"></asp:LinkButton></td>
+                                        <td class="text-center"><asp:LinkButton CssClass="btn btn-warning" ID="btnEliminaAsociacion_ItemCommand" CommandName="EliminaAsociacion" CommandArgument='<%#Eval("ID_Persona") %>' runat="server" Text="Desasociar" OnClientClick='javascript:return confirm("Está seguro que desea desasociar este contacto?")' ValidationGroup="manipulaContactos"></asp:LinkButton></td>
+                                        <td class="text-center"><asp:LinkButton CssClass="btn btn-danger" ID="btnBorrar_ItemCommand" CommandName="Borrar" CommandArgument='<%#Eval("ID_Persona") %>' runat="server" Text="Eliminar" OnClientClick='javascript:return confirm("Está seguro que desea elimnar este contacto?")' ValidationGroup="manipulaContactos" ></asp:LinkButton></td>
                                     </tr>
                                     </ItemTemplate>
                                 </asp:Repeater>

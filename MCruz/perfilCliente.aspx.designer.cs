@@ -10,87 +10,87 @@
 namespace MCruz {
     
     
-    public partial class crearUsuario {
+    public partial class perfilCliente {
         
         /// <summary>
-        /// Control ddlPersonas.
+        /// Control detallesCliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPersonas;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl detallesCliente;
         
         /// <summary>
-        /// Control txtNombreUsuario.
+        /// Control lblNombreCliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreUsuario;
+        protected global::System.Web.UI.WebControls.Label lblNombreCliente;
         
         /// <summary>
-        /// Control frvCuenta.
+        /// Control lblTipoCliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator frvCuenta;
+        protected global::System.Web.UI.WebControls.Label lblTipoCliente;
         
         /// <summary>
-        /// Control txtContrasenna.
+        /// Control lblExtracto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContrasenna;
+        protected global::System.Web.UI.WebControls.Label lblExtracto;
         
         /// <summary>
-        /// Control frvContrasena.
+        /// Control lblEstadoCliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator frvContrasena;
+        protected global::System.Web.UI.WebControls.Label lblEstadoCliente;
         
         /// <summary>
-        /// Control ddlEstado.
+        /// Control lblCedulaJuridica.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlEstado;
+        protected global::System.Web.UI.WebControls.Label lblCedulaJuridica;
         
         /// <summary>
-        /// Control ddlRoles.
+        /// Control lblEmail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlRoles;
+        protected global::System.Web.UI.WebControls.Label lblEmail;
         
         /// <summary>
-        /// Control btnCrearUsuario.
+        /// Control lblTelefono.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCrearUsuario;
+        protected global::System.Web.UI.WebControls.Label lblTelefono;
         
         /// <summary>
-        /// Control lblCreacionUsuario.
+        /// Control listadoContactos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCreacionUsuario;
+        protected global::System.Web.UI.WebControls.Repeater listadoContactos;
     }
 }

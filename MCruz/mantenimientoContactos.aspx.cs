@@ -16,7 +16,7 @@ namespace MCruz
         protected void Page_Load(object sender, EventArgs e)
         {
             verContactos();
-            if(txtCedula.Text.Length == 0)
+            if(txtNombre.Text.Length == 0)
             {
                 btnGuardar.Visible = true;
                 btnActualizar.Visible = false;
@@ -44,7 +44,11 @@ namespace MCruz
             cnt.Nombre = txtNombre.Text;
             cnt.Apellido1 = txtApellido1.Text;
             cnt.Apellido2 = txtApellido2.Text;
-            cnt.Cedula = Convert.ToInt32(txtCedula.Text.Replace("-",""));
+            if (txtCedula.Text.Length > 0)
+            {
+                cnt.Cedula = Convert.ToInt32(txtCedula.Text.Replace("-", ""));
+            }
+                       
             cnt.Email = txtEmail1.Text;
             cnt.Email2 = txtEmail2.Text;
             cnt.Telefono1 = txtTelefono1.Text;
@@ -52,9 +56,12 @@ namespace MCruz
             cnt.Telefono3 = txtTelefono3.Text;
             cnt.Direccion1 = txtDireccion1.Text;
             cnt.Direccion2 = txtDireccion2.Text;
-            cnt.ID_Empresa = Convert.ToInt32(hdID_Cliente.Value);
+            if (hdID_Cliente.Value.Length > 0)
+            {
+                cnt.ID_Empresa = Convert.ToInt32(hdID_Cliente.Value);
+            }
             
-            cnt.RegistrarContactos();
+            lblEmpresaPorAsociar.Text = cnt.RegistrarContactos();
             LimpiarForm();
             verContactos();
         }
@@ -84,6 +91,7 @@ namespace MCruz
             {
                 case ("Asociar"):
                     hdID_Cliente.Value = e.CommandArgument.ToString();
+                    lblEmpresaPorAsociar.Text = "Asociación se completará al guardar los cambios del contacto";
                     break;
             }
         }
@@ -94,12 +102,12 @@ namespace MCruz
             {
                 case ("EliminaAsociacion"):
                     cnt.ID_Persona = Convert.ToInt32(e.CommandArgument.ToString());
-                    cnt.borrarAsociacion();
+                    lblEmpresaPorAsociar.Text = cnt.borrarAsociacion();
                     verContactos();
                     break;
                 case ("Borrar"):
                     cnt.ID_Persona = Convert.ToInt32(e.CommandArgument.ToString());
-                    cnt.borrarContacto();
+                    lblEmpresaPorAsociar.Text = cnt.borrarContacto();
                     verContactos();
                     break;
                 case ("Editar"):
@@ -110,9 +118,21 @@ namespace MCruz
                     dt = cnt.obtenerContacto();
                     for (int i = 0; i < 1; i++)
                     {
-                        hdID_Cliente.Value= dt.Rows[i]["ID_Empresa"].ToString();
+                        if (dt.Rows[i]["ID_Empresa"].ToString().Length > 0)
+                        {
+                            hdID_Cliente.Value = dt.Rows[i]["ID_Empresa"].ToString();
+                        }
+                        
                         hdID_Persona.Value = dt.Rows[i]["ID_Persona"].ToString();
-                        txtCedula.Text = dt.Rows[i]["Cedula"].ToString();
+                        if(dt.Rows[i]["Cedula"].ToString() == "0")
+                        {
+                            txtCedula.Text = "";
+                        }
+                        else
+                        {
+                            txtCedula.Text = dt.Rows[i]["Cedula"].ToString();
+                        }
+                        
                         txtNombre.Text = dt.Rows[i]["Nombre"].ToString();
                         txtApellido1.Text = dt.Rows[i]["Apellido1"].ToString();
                         txtApellido2.Text = dt.Rows[i]["Apellido2"].ToString();
@@ -133,7 +153,10 @@ namespace MCruz
             cnt.Nombre = txtNombre.Text;
             cnt.Apellido1 = txtApellido1.Text;
             cnt.Apellido2 = txtApellido2.Text;
-            cnt.Cedula = Convert.ToInt32(txtCedula.Text.Replace("-", ""));
+            if (txtCedula.Text.Length > 0 )
+            {
+                cnt.Cedula = Convert.ToInt32(txtCedula.Text.Replace("-", ""));
+            }
             cnt.Email = txtEmail1.Text;
             cnt.Email2 = txtEmail2.Text;
             cnt.Telefono1 = txtTelefono1.Text;
@@ -142,8 +165,7 @@ namespace MCruz
             cnt.Direccion1 = txtDireccion1.Text;
             cnt.Direccion2 = txtDireccion2.Text;
             cnt.ID_Empresa = Convert.ToInt32(hdID_Cliente.Value);
-
-            cnt.ActualizarContacto();
+            lblEmpresaPorAsociar.Text = cnt.ActualizarContacto();
             LimpiarForm();
             verContactos();
         }

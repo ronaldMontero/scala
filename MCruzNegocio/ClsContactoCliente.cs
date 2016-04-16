@@ -213,6 +213,20 @@ namespace MCruzNegocio
             return ct.Listado("spListarContactos", lstParam);
         }
         //Funciones
+
+        public DataTable listarContactosPorID()
+        {
+            List<ClsParametro> lstParam = new List<ClsParametro>();
+            try
+            {
+                lstParam.Add(new ClsParametro("@id", ct_ID_Empresa));
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            return ct.Listado("spListarContactosPorID", lstParam);
+        }
         public DataTable listarContactosFiltrado()
         {
             List<ClsParametro> lstParam = new List<ClsParametro>();

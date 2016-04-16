@@ -1,8 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/dummy.Master" AutoEventWireup="true" CodeBehind="eliminarUsuario.aspx.cs" Inherits="MCruz.eliminarUsuario" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="phDatosUsuario" runat="server">
-</asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="phTituloContenido" runat="server">
         <h2 class="font-light m-b-xs">
         Seguridad - Eliminar Usuarios

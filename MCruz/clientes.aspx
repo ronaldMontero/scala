@@ -32,22 +32,20 @@
             </div>    
             <div class="row projects">
                 <div id="resultadoBusqueda"> 
-                    <asp:Repeater ID="resBusqueda" runat="server">
+                    <asp:Repeater ID="resBusqueda" OnItemCommand="resultadosBusqueda_ItemCommand" runat="server">
                             <ItemTemplate>
                                 <div class="col-md-8">
                                         <div class="hpanel filter-item <%# Eval("colorCliente").ToString() %>">
-                                            <a href="#">
-                                                <div class="panel-body">
-                                                    <div class="pull-right text-right">
-                                                        <div class="progress m-t-xs full progress-medium">
-                                                            <div style="width: 100%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="1" role="progressbar" class=' progress-bar progress-bar-<%# Eval("ClasificacionCliente").ToString() %>'></div>
-                                                        </div>
+                                            <div class="panel-body">
+                                                <div class="pull-right text-right">
+                                                    <div class="progress m-t-xs full progress-medium">
+                                                        <div style="width: 100%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="1" role="progressbar" class='progress-bar progress-bar-<%# Eval("ClasificacionCliente").ToString() %>'></div>
                                                     </div>
-                                                    <h4 class="m-b-xs"><asp:Label ID="Nombre_Cliente" runat="server" Text='<%# Eval("Nombre_Cliente").ToString() %>'></asp:Label></h4>
-                                                    <p class="small"><asp:Label ID="TipoCliente" runat="server" Text='<%# Eval("Tipo_Cliente").ToString() %>'></asp:Label></p>
-                                                    <p class="small"><asp:Label ID="Extracto" runat="server" Text='<%# Eval("Extracto").ToString() %>'></asp:Label></p>
                                                 </div>
-                                            </a>
+                                                <h4 class="m-b-xs"><asp:Label ID="Nombre_Cliente" runat="server" Text='<%# Eval("Nombre_Cliente").ToString() %>'></asp:Label></h4>
+                                                <p class="small"><asp:Label ID="TipoCliente" runat="server" Text='<%# Eval("Tipo_Cliente").ToString() %>'></asp:Label></p>
+                                                <asp:LinkButton ID="btnVerCliente" CssClass="btn btn-primary" CommandName="VerCliente" CommandArgument='<%#Eval("ID_Empresa") %>' runat="server"><i class="pe-7s-look"></i> <span class="text-white">Ver Cliente</span></asp:LinkButton>
+                                            </div>
                                         </div>
                                     </div>
                             </ItemTemplate>

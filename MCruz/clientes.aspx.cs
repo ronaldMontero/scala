@@ -31,11 +31,14 @@ namespace MCruz
             resBusqueda.DataBind();
         }
 
-        private void listadoGeneralClientes() {
-            DataTable dt = new DataTable();
-            dt = cli.Listado();
-            resBusqueda.DataSource = dt;
-            resBusqueda.DataBind();
+        protected void resultadosBusqueda_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            switch (e.CommandName)
+            {
+                case ("VerCliente"):
+                    Response.Redirect("perfilCliente.aspx?cliente=" + e.CommandArgument.ToString(), false);
+                    break;
+            }
         }
     }
 }

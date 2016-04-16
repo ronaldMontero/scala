@@ -45,7 +45,12 @@ namespace MCruz
                                 new HttpCookie(FormsAuthentication.FormsCookieName,
                                 crypTicket);
 
+                        HttpCookie userLogged = 
+                                new HttpCookie("userLogged", 
+                                usuario.m_cuenta);
+
                         Response.Cookies.Add(authCookie);
+                        Response.Cookies.Add(userLogged);
 
                         // Redirecciono al Usuario - Importante!! no usar el RedirectFromLoginPage
                         // Para que se puedan usar las Cookies de los HttpModules

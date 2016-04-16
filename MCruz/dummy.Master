@@ -16,6 +16,8 @@
     <link href="css/lib/bootstrap-datepicker3.min.css" rel="stylesheet"/>
     <link href="css/lib/font-awesome.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
+    <link href="css/lib/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="css/lib/helper.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server" >
     </asp:ContentPlaceHolder>
     
@@ -37,7 +39,8 @@
         <div id="navigation">
             <div class="profile-picture">
                 <a href="dasboard.aspx"><img src="imgs/user.png" class="img-circle m-b" alt="Usuario" width="76"/></a>
-                <p class="userName">Nombre Apellido </p>
+                <p class="userName"><asp:Label ID="lblUserLogged" runat="server"></asp:Label></p>
+                <p><asp:LinkButton CssClass="btn btn-danger" ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click"></asp:LinkButton></p>
             </div>
             <ul class="nav" id="side-menu">
                 <li><a href="dashboard.aspx">Panel de control</a></li>
@@ -57,10 +60,6 @@
                         <span class="nav-label">Proyectos</span>
                         <span class="fa arrow"></span>
                     </a>
-                    <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
-                        <li><a href="mantenimientoClientes.aspx">Mantenimiento</a></li>
-                        <li><a href="mantenimientoContactos.aspx">Detalle de Proyectos</a></li>
-                    </ul>
                 </li>
                 <li><a href="#">Facturación</a></li>
                  <li>
@@ -106,6 +105,12 @@
 
         </asp:ContentPlaceHolder>
         </div>
+        <footer class="footer">
+            <span class="pull-right">
+                SCA-LA 
+            </span>
+            &copy; Derechos Reservados  2016
+        </footer>
     </div>
     </form>
     <!-- Vendor scripts -->
