@@ -9,7 +9,7 @@
 <asp:Content ID="Content6" ContentPlaceHolderID="phContenido" runat="server">
     <div class="content animate-panel">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-12">
                 <div class="hpanel">
                     <div class="panel-body">
                         <div class="m-b-md">
@@ -20,13 +20,36 @@
                                 Filtre los resultados de los clientes basado en las opciones de abajo
                             </small>
                         </div>
-                        <div class="form-group">
-                            <label class="control-label">Nombre de cliente:</label>
-                            <div class="input-group text">
-                                <asp:TextBox cssclass="form-control" ToolTip="Nombre del cliente" ID="txtNombreCliente" runat="server"></asp:TextBox>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="control-label">Nombre de cliente:</label>
+                                <asp:TextBox cssclass="form-control" ToolTip="Nombre del cliente" ID="txtNombreCliente" runat="server"></asp:TextBox>                            
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="control-label">Tipo de cliente:</label>
+                                <asp:DropDownList CssClass="form-control" ToolTip="Tipo de Cliente" ID="drpTipoCliente" runat="server">
+                                    <asp:ListItem Text="Seleccione" Value=""></asp:ListItem>
+                                    <asp:ListItem Text="Gubernamental" Value="Gubernamental"></asp:ListItem>
+                                    <asp:ListItem Text="Comercial" Value="Comercial"></asp:ListItem>
+                                </asp:DropDownList>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="control-label">Categoría de cliente:</label>
+                                <asp:DropDownList CssClass="form-control" ToolTip="Tipo de Cliente" ID="drpCategoriaCliente" runat="server">
+                                    <asp:ListItem Text="Seleccione" Value=""></asp:ListItem>
+                                    <asp:ListItem Text="A" Value="A"></asp:ListItem>
+                                    <asp:ListItem Text="B" Value="B"></asp:ListItem>
+                                    <asp:ListItem Text="C" Value="C"></asp:ListItem>
+                                </asp:DropDownList>
                             </div>
                         </div>
-                        <asp:Button CssClass="btn btn-success btn-block" ID="btnBuscar" Text="Buscar" runat="server" OnClick="btnBuscar_Click"></asp:Button>
+                        <br />
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <asp:Button CssClass="btn btn-primary" ID="btnBuscar" Text="Buscar" runat="server" OnClick="btnBuscar_Click"></asp:Button>
+                                <asp:Button CssClass="btn btn-danger" ID="Button1" Text="Cancelar" runat="server"></asp:Button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>    
@@ -34,7 +57,7 @@
                 <div id="resultadoBusqueda"> 
                     <asp:Repeater ID="resBusqueda" OnItemCommand="resultadosBusqueda_ItemCommand" runat="server">
                             <ItemTemplate>
-                                <div class="col-md-8">
+                                <div class="col-md-12">
                                         <div class="hpanel filter-item <%# Eval("colorCliente").ToString() %>">
                                             <div class="panel-body">
                                                 <div class="pull-right text-right">

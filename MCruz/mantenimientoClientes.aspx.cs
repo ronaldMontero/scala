@@ -109,7 +109,7 @@ namespace MCruz
                 cli.Nombre_Cliente = txtNombreCliente.Text;
                 cli.Telefono_empresa = txtTelefonoCliente.Text;
                 cli.Email_Empresa = txtEmailCliente.Text;
-                cli.Tipo_Cliente = drpTipoCliente.SelectedItem.Value;
+                cli.Tipo_Cliente = drpTipoCliente.SelectedItem.Text;
                 cli.Categoria_Cliente = drpCategoriaCliente.SelectedItem.Value;
                 cli.Extracto = txtExtracto.Text;
                 msg = cli.ActualizarCliente();

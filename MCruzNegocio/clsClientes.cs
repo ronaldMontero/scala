@@ -81,6 +81,8 @@ namespace MCruzNegocio
             try
             {
                 lstParam.Add(new ClsParametro("@nombre", cl_Nombre_Cliente));
+                lstParam.Add(new ClsParametro("@tipo", cl_Tipo_Cliente));
+                lstParam.Add(new ClsParametro("@categoria", cl_Categoria_Cliente));
             }
             catch(Exception)
             {

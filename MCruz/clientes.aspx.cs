@@ -26,6 +26,14 @@ namespace MCruz
             {
                 cli.Nombre_Cliente = txtNombreCliente.Text;
             }
+            if (drpTipoCliente.SelectedValue.Length > 0)
+            {
+                cli.Tipo_Cliente = drpTipoCliente.SelectedValue;
+            }
+            if (drpCategoriaCliente.SelectedValue.Length > 0)
+            {
+                cli.Categoria_Cliente = drpCategoriaCliente.SelectedValue;
+            }
             dt = cli.ListadoFiltrado();
             resBusqueda.DataSource = dt;
             resBusqueda.DataBind();

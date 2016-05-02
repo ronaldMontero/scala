@@ -27,10 +27,15 @@ namespace dummyMP
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
-            string[] cookies = Request.Cookies.AllKeys;
-            foreach (string cookie in cookies)
+            HttpCookie aCookie;
+            string cookieName;
+            int limit = Request.Cookies.Count;
+            for (int i = 0; i < limit; i++)
             {
-                Response.Cookies[cookie].Expires = DateTime.Now.AddDays(-1);
+                cookieName = Request.Cookies[i].Name;
+                aCookie = new HttpCookie(cookieName);
+                aCookie.Expires = DateTime.Now.AddDays(-1); 
+                Response.Cookies.Add(aCookie);
             }
             Response.Redirect("login.aspx", false);
         }

@@ -8,7 +8,7 @@
     <small>Mantenimiento de Contactos. Creación actualización y eliminación de contactos de clientes.</small>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="phContenido" runat="server">
-    <div class="col-lg-12" id="mensajes">
+    <div class="col-lg-12">
         <div class="hpanel">
             <div class="panel-body"
                 <div class="panel-default">

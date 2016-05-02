@@ -113,6 +113,7 @@
     <Content Include="imgs\delete.png" />
     <Content Include="imgs\edit.png" />
     <Content Include="imgs\view.jpg" />
+    <Content Include="mantenimientoColaboradores.aspx" />
     <Content Include="perfilCliente.aspx" />
     <Content Include="ProveedoresDelFactura.aspx" />
     <Content Include="ProveedoresDelPersona.aspx" />
@@ -220,6 +221,13 @@
     <Compile Include="eliminarUsuario.aspx.designer.cs">
       <DependentUpon>eliminarUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mantenimientoColaboradores.aspx.cs">
+      <DependentUpon>mantenimientoColaboradores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mantenimientoColaboradores.aspx.designer.cs">
+      <DependentUpon>mantenimientoColaboradores.aspx</DependentUpon>
     </Compile>
     <Compile Include="perfilCliente.aspx.cs">
       <DependentUpon>perfilCliente.aspx</DependentUpon>
